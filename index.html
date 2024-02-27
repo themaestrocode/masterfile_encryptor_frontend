@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Master File Encryptor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!--HEADER SECTION-->
+    <div class="header">
+        <div class="navbar">
+            <ul class="nav-links">
+                <li><a href="">Encrypt File</a></li>
+                <li><a href="">Decrypt File</a></li>
+                <li><a href="">Sign in</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!--HERO SECTION-->
+    <div class="hero-section">
+        <img src="images/secure_file_bg.jpg" alt="secured file hero image">
+        <h1 class="hero-text">Master File Encryptor</h1>
+    </div>
+
+    <!--ABOUT SECTION-->
+    <div class="about-section">
+        <h2>Secure your files using the powerful encryption algorithm of Master File Encryptor</h2>
+        <p>
+            Protect your data and transform your files seamlessly with just a few clicks
+            and experience the next level of file security and versatility.
+            We offer state-of-the-art solutions for effortless and secure
+            <b>file encryption</b>, <b>decryption</b>, <b>format conversion</b>, and more.
+            Our free online powerful encryption solution ensures data privacy and puts you in control of your data and files.
+            <a href="" style="color: rgb(255, 221, 157);">Get started now.</a>
+        </p>
+    </div>
+
+    <div class="important-section">
+        <h3>Important!</h3>
+        <p>
+            Kindly note that we do not save your encryption keys. If you forget your encryption key, there is no way to
+            decrypt your file in the future. So, please keep it save.
+        </p>
+    </div>
+
+    <!--FILE ENCRYPTION FORM SECTION-->
+    <div class="form-section">
+        <form class="file-data-form js-file-data-form" enctype="multipart/form-data">
+            <label for="file">Select File</label><br>
+            <input class="selected-file js-selected-file" type="file" name="file" required><br>
+
+            <label for="encryptionKey">Secure with an access key</label><br>
+            <input class="encryption-key js-encryption-key" type="password" name="encryptionKey"
+                placeholder="encryption key" required><br>
+
+            <label for="encryptionKey2">Enter the access key again</label><br>
+            <input class="encryption-key2 js-encryption-key2" type="password" name="encryptionKey2"
+                placeholder="confirm encryption key" required><br>
+
+            <button class="encrypt-button js-encrypt-button" type="submit">Encrypt file</button>
+        </form>
+    </div>
+
+    <div class="download-section js-download-section">
+
+    </div>
+
+    <div class="guide-section">
+        <h2>Encryption Guide</h2>
+        <p>Master File Encryptor is an easy to use encryption tool that involves just 3 steps</p>
+        <ol>
+            <li>Choose the file to encrypt</li>
+            <li>Provide an encryption key</li>
+            <li>Download the encrypted file from the generated link.</li>
+        </ol>
+    </div>
+
+    <footer>
+        <div class="footer-section">
+            <p>Master File Encryptor @ 2024.</p>
+            <p>All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!--javascript attachments-->
+    <script type="module" src="scripts/encryption.js"></script>
+</body>
+
+</html>

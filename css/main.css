@@ -1,0 +1,139 @@
+.hero-section {
+  position: relative;
+}
+
+.hero-section img {
+  height: 380px;
+  width: 100%;
+  object-fit: cover;
+  /* position: relative; */
+}
+
+.hero-text {
+  /* background-color: aqua; */
+  position: absolute;
+  font-size: 4rem;
+  text-align: center;
+  margin: 0;
+  left: 10%;
+  top: 40%;
+  right: 10%;
+}
+
+.about-section {
+  margin: 0 auto;
+  padding-top: 40px;
+  max-width: 60%;
+  text-align: center;
+}
+
+.about-section p {
+  padding-bottom: 60px;
+}
+
+.important-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.important-section p {
+  text-align: center;
+  margin: 4px 200px;
+}
+
+.form-section {
+  background-color: black;
+  margin: 0 auto;
+  padding: 40px 0;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.form-section input {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.selected-file {
+  padding: 12px 10px;
+  background-color: rgb(0, 80, 80);
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.encryption-key, .encryption-key2 {
+  padding: 10px 20px;
+  width: 240px;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+.encrypt-button {
+  background-color: rgb(51, 102, 153);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  margin-top: 20px;
+  padding: 14px 30px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.download-section {
+  /* background-color: rgb(20, 20, 20); */
+  background: linear-gradient(to bottom right, #1a1a1a, #000000);
+  margin: 0 auto;
+  padding: 2px;
+  text-align: center;
+}
+
+.download-section p {
+  margin-top: 10px;
+}
+
+.download-link {
+  padding: 20px 0;
+}
+
+.download-link a {
+  padding: 10px 20px;
+  background-color: rgb(0, 95, 8);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.password-error-message {
+  background-color: rgb(20, 20, 20);
+  color: rgb(216, 0, 0);
+  padding: 10px;
+  text-align: center;
+}
+
+.guide-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  background-color: black;
+  color: rgb(255, 221, 157);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 0.8rem;
+}
+
+footer p {
+  margin: 0;
+  margin-top: 10px;
+  text-align: center;
+}

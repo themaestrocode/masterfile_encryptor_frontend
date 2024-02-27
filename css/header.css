@@ -1,0 +1,32 @@
+.header {
+  /* height: 60px; */
+  background-color: rgb(8, 8, 8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links {
+  /* width: 500px; */
+  flex: 1;
+  background-color: black;
+  border-radius: 20px;
+  padding: 8px 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links li {
+  margin: 0 50px;
+}
+
+.nav-links a {
+  color: rgb(255, 221, 157);
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: rgb(250, 186, 68);
+}
