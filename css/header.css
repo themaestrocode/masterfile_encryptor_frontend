@@ -1,9 +1,14 @@
 .header {
-  /* height: 60px; */
   background-color: rgb(8, 8, 8);
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
 }
 
 .nav-links {
@@ -19,12 +24,24 @@
 }
 
 .nav-links li {
-  margin: 0 50px;
+  margin: 0 40px;
 }
 
 .nav-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
   color: rgb(255, 221, 157);
   text-decoration: none;
+  padding-left: 10px;
+}
+
+.nav-links a img {
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgb(255, 221, 157);
+  margin-right: 10px;
 }
 
 .nav-links a:hover {

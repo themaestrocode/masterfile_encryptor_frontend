@@ -41,7 +41,7 @@
 
 .important-section p {
   text-align: center;
-  margin: 4px 200px;
+  margin: 0 200px;
 }
 
 .form-section {
@@ -73,14 +73,20 @@
 }
 
 .encrypt-button {
-  background-color: rgb(51, 102, 153);
-  color: white;
+  /* background-color: rgb(255, 221, 157); */
+  background: linear-gradient(to bottom, rgb(255, 221, 157), rgb(252, 181, 50));
+  color: black;
+  font-weight: 700;
   border: none;
   border-radius: 50px;
   margin-top: 20px;
   padding: 14px 30px;
   font-size: 1rem;
   cursor: pointer;
+}
+
+.encrypt-button:hover {
+  background: linear-gradient(to bottom, rgb(247, 191, 89), rgb(228, 153, 13));
 }
 
 .download-section {
@@ -122,9 +128,14 @@
   align-items: center;
 }
 
+.guide-section p {
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
 footer {
   background-color: black;
-  color: rgb(255, 221, 157);
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
