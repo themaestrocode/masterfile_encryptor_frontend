@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2021 (64-Bit) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="106.986mm" height="105.431mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 1602.68 1579.38"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <font id="FontID0" horiz-adv-x="703" font-variant="normal" style="fill-rule:nonzero" font-weight="700">
+	<font-face 
+		font-family="Leelawadee UI">
+		<font-face-src>
+			<font-face-name name="Leelawadee UI Bold"/>
+		</font-face-src>
+	</font-face>
+   <missing-glyph><path d="M0 0z"/></missing-glyph>
+   <glyph unicode="i" horiz-adv-x="284" d="M143.001 579.167c-26.001,0 -47.3336,7.66666 -63.8336,23.1668 -16.6669,15.5002 -24.9997,34.3324 -24.9997,56.8331 0,23.1668 8.3328,42.0004 24.9997,56.6662 16.5001,14.6672 37.8327,22.0001 63.8336,22.0001 26.4989,0 47.8328,-7.33291 64.3329,-22.0001 16.3332,-14.6658 24.666,-33.4994 24.666,-56.6662 0,-23.3337 -8.3328,-42.6665 -24.666,-57.6675 -16.5001,-14.8327 -37.834,-22.3325 -64.3329,-22.3325zm76.1659 -579.167l-154.166 0 0 500 154.166 0 0 -500z"/>
+   <glyph unicode="n" horiz-adv-x="604" d="M547.833 0l-153.832 0 0 277.834c0,77.4996 -27.667,116.167 -83.0009,116.167 -26.6658,0 -48.6658,-10.167 -65.8334,-30.6666 -17.3331,-20.5009 -25.9996,-46.6674 -25.9996,-78.1671l0 -285.167 -154.166 0 0 500 154.166 0 0 -79.1669 1.99976 0c36.8341,61.0009 90.3339,91.3337 160.667,91.3337 110.667,0 165.999,-68.6662 165.999,-206l0 -306.167z"/>
+  </font>
+  <style type="text/css">
+   <![CDATA[
+    @font-face { font-family:"Leelawadee UI";font-variant:normal;font-weight:bold;src:url("#FontID0") format(svg)}
+    .fil1 {fill:black}
+    .fil0 {fill:url(#id0)}
+    .fnt0 {font-weight:bold;font-size:1113.16px;font-family:'Leelawadee UI'}
+   ]]>
+  </style>
+  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="-0" y1="789.69" x2="1602.68" y2="789.69">
+   <stop offset="0" style="stop-opacity:1; stop-color:#FFDD9D"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#FFDD9D"/>
+  </linearGradient>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <rect class="fil0" x="0" width="1602.68" height="1579.38"/>
+  <text x="354.85" y="1200.35"  class="fil1 fnt0">in</text>
+ </g>
+</svg>

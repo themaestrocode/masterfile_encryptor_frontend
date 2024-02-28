@@ -22,13 +22,13 @@
 
 .about-section {
   margin: 0 auto;
-  padding-top: 40px;
-  max-width: 60%;
+  padding: 40px 140px;
+  /* max-width: 60%; */
   text-align: center;
 }
 
 .about-section p {
-  padding-bottom: 60px;
+  /* padding-bottom: 60px; */
 }
 
 .important-section {
@@ -72,7 +72,7 @@
   border-radius: 4px;
 }
 
-.encrypt-button {
+.encrypt-button, .decrypt-button {
   /* background-color: rgb(255, 221, 157); */
   background: linear-gradient(to bottom, rgb(255, 221, 157), rgb(252, 181, 50));
   color: black;
@@ -85,7 +85,7 @@
   cursor: pointer;
 }
 
-.encrypt-button:hover {
+.encrypt-button:hover, .decrypt-button:hover {
   background: linear-gradient(to bottom, rgb(247, 191, 89), rgb(228, 153, 13));
 }
 
@@ -133,18 +133,30 @@
   margin-left: 100px;
 }
 
-footer {
-  background-color: black;
-  color: white;
+.share-section {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px 0;
-  font-size: 0.8rem;
+  padding-top: 40px;
 }
 
-footer p {
-  margin: 0;
-  margin-top: 10px;
-  text-align: center;
+.social-icons {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.social-icons li {
+  margin: 0 20px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: rgb(255, 221, 157);
+}
+
+.social-icons img {
+  height: 30px;
+  border-radius: 50%;
 }

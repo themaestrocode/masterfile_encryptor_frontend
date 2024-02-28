@@ -3,34 +3,36 @@
 
 <head>
     <title>Master File Encryptor</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 
 <body>
-    <!--HEADER SECTION-->
+    <!-- HEADER SECTION -->
     <div class="header">
         <div class="navbar">
             <ul class="nav-links">
                 <li>
-                    <a href="index.html">
+                    <a href="#d" class="encrypt-file js-encrypt-file">
                         <img src="images/icons/mylock.svg" alt="lock-icon">
                         Encrypt File
                     </a>
                 </li>
                 <li>
-                    <a href="decryption.html">
+                    <a href="#d" class="decrypt-file js-decrypt-file">
                         <img src="images/icons/myunlock1.svg" alt="unlock-icon">
                         Decrypt File
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="#">
                         <img src="images/icons/signin.svg" alt="signin-icon">
                         Sign in
                     </a>
@@ -40,7 +42,7 @@
 
     </div>
 
-    <!--HERO SECTION-->
+    <!-- HERO SECTION -->
     <div class="hero-section">
         <img src="images/secure_file_bg.jpg" alt="secured file hero image">
         <h1 class="hero-text">Master File Encryptor</h1>
@@ -48,76 +50,99 @@
 
     <!--ABOUT SECTION-->
     <div class="about-section">
-        <h2>Secure your files using the powerful encryption tool of Master File Encryptor. Your #1 solution for file security.</h2>
+        <h2>Secure your files using the powerful encryption tool of Master File Encryptor. Your #1 solution for file
+            security.</h2>
         <p>
             Protect your data and transform your files seamlessly with just a few clicks
             and experience the next level of file security and versatility.
             We offer instant state-of-the-art solutions for effortless and secure
             <b>file encryption</b>, <b>file decryption</b>, <b>file format conversion</b>, and more.
-            Our free online powerful encryption solution ensures data privacy and puts you in control of your data and files.
+            Our free online powerful encryption solution ensures data privacy and puts you in control of your data and
+            files.
             Whatever the file type or extension (JPEG, PNG, PDF, TXT, MP3, MP4, and more), we got you covered!
-            <a href="" style="display: block;">Get started now.</a>
+            <a href="#d" style="display: block;">Try for free.</a>
         </p>
     </div>
 
-    <div class="important-section">
+    <div id="d" class="important-section">
         <h3>Important!</h3>
         <p>
             Kindly note that we do not save your encryption keys. If you forget your encryption key, there is no way to
             decrypt your file in the future. Please, keep it save.
-            Read the <a href="">usage guide</a> below to learn more.
+            Read the <a href="#guide">usage guide</a> below to learn more.
         </p>
     </div>
 
-    <!--FILE ENCRYPTION FORM SECTION-->
-    <div class="form-section">
-        <form class="file-data-form js-file-data-form" enctype="multipart/form-data">
-            <label for="file">Select File</label><br>
-            <input class="selected-file js-selected-file" type="file" name="file" required><br>
+    <!-- FILE ENCRYPTION FORM SECTION -->
+    <div class="form-section js-form-section">
 
-            <label for="encryptionKey">Encrypt with a key</label><br>
-            <input class="encryption-key js-encryption-key" type="password" name="encryptionKey"
-                placeholder="encryption key" required><br>
-
-            <label for="encryptionKey2">Enter the key again</label><br>
-            <input class="encryption-key2 js-encryption-key2" type="password" name="encryptionKey2"
-                placeholder="confirm encryption key" required><br>
-
-            <button class="encrypt-button js-encrypt-button" type="submit">Encrypt file</button>
-        </form>
     </div>
 
     <div class="download-section js-download-section">
 
     </div>
 
-    <div class="guide-section">
+    <!-- USAGE GUIDE SECTION -->
+    <div id="guide" class="guide-section">
         <h2>Usage Guide</h2>
         <p>Master File Encryptor is an easy to use encryption tool that gets the job done with just 2 clicks.</p>
         <p>
-            To encrypt a file, select the file and provide an encryption key to secure access to the file.
+            <b>To encrypt a file</b>, select the file and provide an encryption key to secure access to the file.
             The encryption key is very important, so we advice you keep it save for decryption purpose.
-            Again, we do not save your encryption keys in our system; this is to say that you are in maximum control of the content of your file.
-            Click the "Encrypt file" button and a download button will be generated for you to download the encrypted file.
+            Again, we do not save any encryption key in our system; this is to say that you are in maximum control of
+            the content of your file.
+            Next, click the "Encrypt file" button and a download button will be generated for you to download the
+            encrypted file.
         </p>
         <p>
-            To decrypt a file, sjgefjdgfhsdhfbhsbdhbdhbsbdkbksdbjkbsdbgkwbdnbmDfwefg
-            dgzdgzgzefffffffffehgshgrngxtetybsebysrybyw53ny5yary rt sty4y4th th w4ty 4
-            rsergsetye6h yhw 4646h4thdrthdryjdrjdytjyjytdrthrtrt ththtrh thseth th seth sththseths thseths theth
-            erghe the thteh thrererg rheryryjhtr thethe ghte reqw rtrer rererteryerg ryereryrg terwrtwrtyr tuewe
-            wrte5 5yetrerye5y eyetutsf ywryteht6ruruyt etyety
+            <b>To decrypt a file</b>, simply provide the encryption key with which the file was encrypted.
+            It doesn't matter if the file name has been changed; so far the right key could be provided, your file will
+            be decrypted and a download button will be generated.
         </p>
     </div>
 
+    <!-- SHARE SECTION -->
+    <div class="share-section">
+        <p style="margin: 0;">Recommend this site to others</p>
+        <ul class="social-icons">
+            <li>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:5501/index.html" target="_blank" rel="noopener noreferrer">
+                    <img src="images/icons/myfb.svg">
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/intent/tweet?url=http://127.0.0.1:5501/index.html&text=Check%20out%20this%20awesome%20site" target="_blank" rel="noopener noreferrer">
+                    Twitter
+                </a>
+            </li>
+            <li>
+                <a href="https://wa.me/?text=Check%20out%20this%20awesome%20site:%20http://127.0.0.1:5501/index.html" target="_blank" rel="noopener noreferrer">
+                    <img src="images/icons/mywhatsapp.svg">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/shareArticle?url=http://yourwebsite.com&title=Check%20out%20this%20awesome%20site" target="_blank" rel="noopener noreferrer">
+                    <img src="images/icons/mylinkedin.svg">
+                </a>
+            </li>
+            <li>
+                <a href="#" class="js-copy-cb">
+                    <img src="images/icons/mycopy.svg">
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- FOOTER SECTION -->
     <footer>
-        <div class="footer-section">
+        <div class="footer-declarations">
             <p>Master File Encryptor @ 2024.</p>
             <p>All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!--javascript attachments-->
-    <script type="module" src="scripts/encryption.js"></script>
+    <!-- javascript attachments -->
+    <script type="module" src="scripts/index.js"></script>
 </body>
 
 </html>

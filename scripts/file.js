@@ -1,14 +1,40 @@
-export function encryptFile(file, encryptionKey, downloadSection) {
-   const formData = new FormData();
+let formData;
+let filename = "";
+
+export const downloadSection = document.querySelector(".js-download-section");
+
+export function encryptFile(file, encryptionKey, encryptionKey2) {
+   if (encryptionKey !== encryptionKey2) {
+      downloadSection.innerHTML = "<p>Encryption keys do not match!</p>";
+      downloadSection.classList.add("password-error-message");
+      return;
+   }
+
+   formData = new FormData();
    formData.append("file", file);
    formData.append("encryptionKey", encryptionKey);
-   let filename = "";
 
    const urlString = "http://localhost:8060/api/v1/masterfileencryptor/encrypt";
    const request = new Request(urlString, { method: "POST", body: formData });
 
+   doFetch(request);
+}
+
+export function decryptFile(file, encryptionKey) {
+   formData = new FormData();
+   formData.append("file", file);
+   formData.append("encryptionKey", encryptionKey);
+
+   const urlString = "http://localhost:8060/api/v1/masterfileencryptor/decrypt";
+   const request = new Request(urlString, { method: "POST", body: formData });
+
+   doFetch(request);
+}
+
+function doFetch(request) {
    fetch(request)
       .then(response => {
+         console.log(response);
          if (!response.ok) throw new Error(`Invalid response: ${response.status} - ${response.statusText}`);
 
          const disposition = response.headers.get("Content-Disposition");
@@ -24,12 +50,12 @@ export function encryptFile(file, encryptionKey, downloadSection) {
       .then(blob => {
          const url = window.URL.createObjectURL(blob);
 
-         generateDownloadLink(url, filename, downloadSection);
+         generateDownloadLink(url, filename);
       })
       .catch(console.warn);
 }
 
-function generateDownloadLink(url, filename, downloadSection) {
+function generateDownloadLink(url, filename) {
    downloadSection.classList.contains("password-error-message") && downloadSection.classList.remove("password-error-message");
 
    downloadSection.innerHTML = `

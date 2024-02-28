@@ -8,7 +8,7 @@ viewBox="0 0 2255.78 2222.98"
  <defs>
   <style type="text/css">
    <![CDATA[
-    .str0 {stroke:black;stroke-width:111.88;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256}
+    .str0 {stroke:black;stroke-width:134.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256}
     .fil1 {fill:none}
     .fil2 {fill:black}
     .fil3 {fill:white}
@@ -23,11 +23,13 @@ viewBox="0 0 2255.78 2222.98"
  <g id="Layer_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>
   <rect class="fil0" x="-0" width="2255.78" height="2222.98"/>
-  <rect class="fil1 str0" x="928.27" y="669.38" width="399.25" height="444.87" rx="76.65" ry="108.94"/>
-  <rect class="fil2" x="765.79" y="990.28" width="724.21" height="563.33" rx="92.48" ry="80.64"/>
-  <g id="_2035190943968">
-   <circle class="fil3" cx="1127.9" cy="1184.19" r="80.2"/>
-   <rect class="fil3" x="1089.09" y="1191.56" width="77.61" height="248.35" rx="38.8" ry="38.8"/>
+  <g id="_2457389750992">
+   <rect class="fil1 str0" x="889.32" y="583.12" width="477.14" height="531.66" rx="91.61" ry="130.2"/>
+   <rect class="fil2" x="695.14" y="966.63" width="865.49" height="673.23" rx="110.52" ry="96.37"/>
+   <g>
+    <circle class="fil3" cx="1127.9" cy="1198.37" r="95.84"/>
+    <rect class="fil3" x="1081.52" y="1207.18" width="92.75" height="296.8" rx="46.37" ry="46.37"/>
+   </g>
   </g>
  </g>
 </svg>

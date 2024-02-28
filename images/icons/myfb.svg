@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2021 (64-Bit) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="106.745mm" height="105.193mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 1227.32 1209.47"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <font id="FontID0" horiz-adv-x="776" font-variant="normal" style="fill-rule:nonzero" font-weight="700">
+	<font-face 
+		font-family="Verdana">
+		<font-face-src>
+			<font-face-name name="Verdana Bold"/>
+		</font-face-src>
+	</font-face>
+   <missing-glyph><path d="M0 0z"/></missing-glyph>
+   <glyph unicode="f" horiz-adv-x="422" d="M438 630.001l-13.1667 0c-7.83326,2.16595 -18.0008,4.83268 -30.4998,7.66633 -12.5004,2.83366 -25.834,4.33326 -40.1665,4.33326 -34.3336,0 -57.6678,-6.16672 -69.8344,-18.3332 -12.1665,-12.3334 -18.3332,-36.1671 -18.3332,-71.334l0 -4.33326 135 0 0 -119 -129 0 0 -429 -176 0 0 429 -74.9995 0 0 119 74.9995 0 0 15.1671c0,67.3332 17.8338,117.666 53.5001,151.333 35.5007,33.6673 89.5003,50.4995 161.668,50.4995 25.9996,0 49.6663,-0.833267 70.6663,-2.66673 21.1669,-1.83346 39.8326,-4.16634 56.1669,-7.16555l0 -125.167z"/>
+  </font>
+  <style type="text/css">
+   <![CDATA[
+    @font-face { font-family:"Verdana";font-variant:normal;font-weight:bold;src:url("#FontID0") format(svg)}
+    .fil1 {fill:black}
+    .fil0 {fill:url(#id0)}
+    .fnt0 {font-weight:bold;font-size:840.32px;font-family:'Verdana'}
+   ]]>
+  </style>
+  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="-0" y1="604.74" x2="1227.32" y2="604.74">
+   <stop offset="0" style="stop-opacity:1; stop-color:#FFDD9D"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#FFDD9D"/>
+  </linearGradient>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <rect class="fil0" x="0" width="1227.32" height="1209.47"/>
+  <text x="420.81" y="926.16"  class="fil1 fnt0">f</text>
+ </g>
+</svg>
