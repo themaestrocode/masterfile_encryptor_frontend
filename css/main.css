@@ -12,7 +12,7 @@
 .hero-text {
   /* background-color: aqua; */
   position: absolute;
-  font-size: 4rem;
+  font-size: 5rem;
   text-align: center;
   margin: 0;
   left: 10%;
@@ -70,7 +70,8 @@
   cursor: pointer;
 }
 
-.encryption-key, .encryption-key2 {
+.encryption-key,
+.encryption-key2 {
   padding: 10px 20px;
   width: 280px;
   min-width: 100px;
@@ -78,7 +79,8 @@
   border-radius: 4px;
 }
 
-.encrypt-button, .decrypt-button {
+.encrypt-button,
+.decrypt-button {
   /* background-color: rgb(255, 221, 157); */
   background: linear-gradient(to bottom, rgb(255, 221, 157), rgb(252, 181, 50));
   color: black;
@@ -91,7 +93,8 @@
   cursor: pointer;
 }
 
-.encrypt-button:hover, .decrypt-button:hover {
+.encrypt-button:hover,
+.decrypt-button:hover {
   background: linear-gradient(to bottom, rgb(247, 191, 89), rgb(228, 153, 13));
 }
 
@@ -131,6 +134,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .guide-section h3 {
@@ -138,8 +142,8 @@
 }
 
 .guide-section p {
-  margin-right: 100px;
-  margin-left: 100px;
+  margin-right: 160px;
+  margin-left: 160px;
 }
 
 .share-section {
@@ -169,20 +173,20 @@
   height: 36px;
 }
 
-@media ((min-width: 350px) and (max-width: 576px)) {
+@media (min-width: 350px) and (max-width: 570px) {
   .hero-section img {
     height: 140px;
   }
 
   .hero-text {
     font-size: 2rem;
-    left: 0;
-    right: 0;
+    left: 8%;
+    right: 8%;
     top: 30%;
   }
 
   .about-section {
-    padding: 6px 30px;
+    padding: 6px 40px;
     font-size: 1em;
   }
 
@@ -192,35 +196,45 @@
 
   .important-section {
     margin: 20px 0;
+    padding: 0 40px;
   }
 
   .important-section p {
     margin: 0;
-    padding: 0 40px;
   }
 
   .form-section {
     font-size: 1em;
+    padding: 30px 0;
+  }
+
+  .form-section input {
+    margin-top: 6px;
+    margin-bottom: 12px;
   }
 
   .selected-file {
-    width: 220px;
-    padding: 12px 10px;
+    width: 180px;
+    padding: 10px;
     background-color: rgb(0, 80, 80);
     border-radius: 4px;
     font-size: 1em;
     cursor: pointer;
   }
-  
-  .encryption-key, .encryption-key2 {
-    max-width: 200px;
+
+  .encryption-key,
+  .encryption-key2 {
+    width: 160px;
     padding: 10px 14px;
     font-size: 1em;
     border-radius: 4px;
   }
 
-  .encrypt-button, .encryption-key2 {
+  .encrypt-button,
+  .decrypt-button {
+    margin-top: 20px;
     font-size: 1em;
+    padding: 10px 20px;
   }
 
   .download-section {
@@ -237,7 +251,7 @@
   }
 
   .social-icons li {
-    margin: 0 18px;
+    margin: 0 14px;
   }
 
   .social-icons img {
@@ -247,5 +261,107 @@
 
   .social-icons img:hover {
     height: 24px;
+  }
+}
+
+@media (min-width: 571px) and (max-width: 820px) {
+  .hero-section img {
+    height: 300px;
+  }
+
+  .hero-text {
+    font-size: 3.5rem;
+    left: 8%;
+    right: 8%;
+    top: 30%;
+  }
+
+  .about-section {
+    padding: 6px 100px;
+  }
+
+  .important-section p {
+    margin: 0 100px;
+  }
+
+  .guide-section p {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 821px) and (max-width: 1400px) {
+  h2 {
+    font-size: 2em;
+  }
+
+  .hero-text {
+    font-size: 4em;
+  }
+
+}
+
+@media (min-width: 1401px) {
+  .hero-section img {
+    height: 800px;
+  }
+
+  .hero-text {
+    font-size: 7em;
+  }
+
+  .about-section {
+    padding: 40px 500px;
+    font-size: 1em;
+  }
+
+  .important-section p {
+    margin: 0 500px;
+  }
+
+  .form-section {
+    font-size: 1em;
+    padding: 80px 0;
+  }
+
+  .selected-file {
+    padding: 20px;
+    font-size: 1em;
+  }
+
+  .encryption-key,
+  .encryption-key2 {
+    padding: 20px;
+    width: 480px;
+    min-width: 300px;
+    font-size: 1em;
+    border-radius: 4px;
+  }
+
+  .encrypt-button,
+  .decrypt-button {
+    margin-top: 40px;
+    padding: 20px 60px;
+    font-size: 1.2em;
+  }
+
+  .guide-section p {
+    margin: 40px 500px;
+  }
+
+  .social-icons img {
+    height: 60px;
+  }
+
+  .social-icons img:hover {
+    height: 70px;
+  }
+
+  .social-icons li {
+    margin: 20px 60px;
   }
 }

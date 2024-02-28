@@ -17,10 +17,23 @@ a {
   color: rgb(255, 221, 157);
 }
 
-@media ((min-width: 350px) and (max-width: 576px)) {
+@media (min-width: 350px) and (max-width: 570px) {
   body {
-    padding-top: 60px;
+    padding-top: 50px;
     font-size: 12px;
   }
 
+}
+
+@media (min-width: 571px) and (max-width: 820px) {
+  body {
+    
+  }
+}
+
+@media (min-width: 1401px) {
+  body {
+    font-size: 24px;
+    padding-top: 160px;
+  }
 }
