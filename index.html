@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Master File Encryptor</title>
+    <title>MasterFile Encryptor</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,6 +17,9 @@
 <body>
     <!-- HEADER SECTION -->
     <div class="header">
+        <a href="index.html" class="mfe-home-link">
+            <img class="mfe-logo" src="images/icons/mfe.svg">
+        </a>
         <div class="navbar">
             <ul class="nav-links">
                 <li>
@@ -32,7 +35,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a>
                         <img src="images/icons/signin.svg" alt="signin-icon">
                         Sign in
                     </a>
@@ -45,13 +48,13 @@
     <!-- HERO SECTION -->
     <div class="hero-section">
         <img src="images/secure_file_bg.jpg" alt="secured file hero image">
-        <h1 class="hero-text">Master File Encryptor</h1>
+        <h1 class="hero-text">MasterFile Encryptor</h1>
     </div>
 
     <!--ABOUT SECTION-->
     <div class="about-section">
-        <h2>Secure your files using the powerful encryption tool of Master File Encryptor. Your #1 solution for file
-            security.</h2>
+        <h2>Secure your files using the powerful encryption tool of Master File Encryptor.</h2>
+        <h2>Your #1 solution for file security.</h2>
         <p>
             Protect your data and transform your files seamlessly with just a few clicks
             and experience the next level of file security and versatility.
@@ -86,17 +89,19 @@
     <div id="guide" class="guide-section">
         <h2>Usage Guide</h2>
         <p>Master File Encryptor is an easy to use encryption tool that gets the job done with just 2 clicks.</p>
+        <h3>File Encryption</h3>
         <p>
-            <b>To encrypt a file</b>, select the file and provide an encryption key to secure access to the file.
+            To encrypt a file, select the file and provide an encryption key to secure access to the file.
             The encryption key is very important, so we advice you keep it save for decryption purpose.
-            Again, we do not save any encryption key in our system; this is to say that you are in maximum control of
-            the content of your file.
             Next, click the "Encrypt file" button and a download button will be generated for you to download the
             encrypted file.
+            Again, we do not save any encryption key in our system; this is to say that you are in maximum control of
+            the content of your file.
         </p>
+        <h3>File Decryption</h3>
         <p>
-            <b>To decrypt a file</b>, simply provide the encryption key with which the file was encrypted.
-            It doesn't matter if the file name has been changed; so far the right key could be provided, your file will
+            To decrypt a file, simply select the encrypted file and provide the encryption key with which the file was encrypted.
+            It doesn't matter if the name of the file had been changed; so far the right key was provided, your file will
             be decrypted and a download button will be generated.
         </p>
     </div>
@@ -106,27 +111,31 @@
         <p style="margin: 0;">Recommend this site to others</p>
         <ul class="social-icons">
             <li>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:5501/index.html" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:5501" target="_blank"
+                    rel="noopener noreferrer" title="Facebook">
                     <img src="images/icons/myfb.svg">
                 </a>
             </li>
             <li>
-                <a href="https://twitter.com/intent/tweet?url=http://127.0.0.1:5501/index.html&text=Check%20out%20this%20awesome%20site" target="_blank" rel="noopener noreferrer">
-                    Twitter
+                <a href="https://twitter.com/intent/tweet?url=http://127.0.0.1:5501&text=Check%20out%20this%20awesome%20site"
+                    target="_blank" rel="noopener noreferrer" title="X/Twitter">
+                    <img src="images/icons/mytwitter.svg">
                 </a>
             </li>
             <li>
-                <a href="https://wa.me/?text=Check%20out%20this%20awesome%20site:%20http://127.0.0.1:5501/index.html" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/?text=Check%20out%20this%20awesome%20site:%20http://127.0.0.1:5501"
+                    target="_blank" rel="noopener noreferrer" title="Whatsapp">
                     <img src="images/icons/mywhatsapp.svg">
                 </a>
             </li>
             <li>
-                <a href="https://www.linkedin.com/shareArticle?url=http://yourwebsite.com&title=Check%20out%20this%20awesome%20site" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/shareArticle?url=http://127.0.0.1:5501&title=Check%20out%20this%20awesome%20site"
+                    target="_blank" rel="noopener noreferrer" title="LinkedIn">
                     <img src="images/icons/mylinkedin.svg">
                 </a>
             </li>
             <li>
-                <a href="#" class="js-copy-cb">
+                <a class="js-copy-cb" title="Copy to Clipboard">
                     <img src="images/icons/mycopy.svg">
                 </a>
             </li>
@@ -136,7 +145,7 @@
     <!-- FOOTER SECTION -->
     <footer>
         <div class="footer-declarations">
-            <p>Master File Encryptor @ 2024.</p>
+            <p>MasterFile Encryptor © 2024.</p>
             <p>All Rights Reserved.</p>
         </div>
     </footer>

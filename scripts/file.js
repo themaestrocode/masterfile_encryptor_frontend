@@ -34,7 +34,6 @@ export function decryptFile(file, encryptionKey) {
 function doFetch(request) {
    fetch(request)
       .then(response => {
-         console.log(response);
          if (!response.ok) throw new Error(`Invalid response: ${response.status} - ${response.statusText}`);
 
          const disposition = response.headers.get("Content-Disposition");

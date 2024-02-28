@@ -16,3 +16,11 @@ a {
   text-decoration: none;
   color: rgb(255, 221, 157);
 }
+
+@media ((min-width: 350px) and (max-width: 576px)) {
+  body {
+    padding-top: 60px;
+    font-size: 12px;
+  }
+
+}

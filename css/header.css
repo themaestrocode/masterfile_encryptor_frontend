@@ -1,8 +1,9 @@
 .header {
   background-color: rgb(8, 8, 8);
   height: 80px;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  justify-content: space-between;
   align-items: center;
   position: fixed;
   top: 0;
@@ -11,11 +12,20 @@
   z-index: 100;
 }
 
+.mfe-home-link {
+  margin: 0 20px;
+}
+
+.mfe-logo {
+  height: 20px;
+}
+
 .nav-links {
-  /* width: 500px; */
-  flex: 1;
+  /* flex: 1; */
   background-color: black;
   border-radius: 20px;
+  margin: 0 260px;
+  max-width: 660px;
   padding: 8px 0;
   list-style: none;
   display: flex;
@@ -35,6 +45,7 @@
   color: rgb(255, 221, 157);
   text-decoration: none;
   padding-left: 10px;
+  text-wrap: nowrap;
 }
 
 .nav-links a img {
@@ -45,4 +56,39 @@
 
 .nav-links a:hover {
   color: rgb(250, 186, 68);
+}
+
+@media ((min-width: 350px) and (max-width: 576px)) {
+  .header {
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mfe-home-link {
+    margin: 0 10px;
+  }
+  
+  .mfe-logo {
+    height: 16px;
+  }
+
+  .nav-links {
+    margin: 0 10px;
+  }
+
+  .nav-links li {
+    margin: 0 14px;
+  }
+
+  .nav-links a {
+    font-size: 1em;
+  }
+
+  .nav-links a img {
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 6px;
+  }
+
 }

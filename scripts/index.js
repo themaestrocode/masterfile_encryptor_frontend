@@ -68,3 +68,17 @@ function renderDecryptionHTML() {
    });
 }
 
+document.querySelector(".js-copy-cb").addEventListener("click", () => {
+   // Create a temporary textarea element to facilitate copying
+   const textarea = document.createElement('textarea');
+   textarea.value = "http://127.0.0.1:5501";
+   // Append the textarea to the document
+   document.body.appendChild(textarea);
+   // Select the text in the textarea
+   textarea.select();
+   // Execute the copy command
+   document.execCommand("copy");
+   // Remove the temporary textarea
+   document.body.removeChild(textarea);
+
+});
