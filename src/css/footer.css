@@ -16,7 +16,7 @@ footer {
 }
 
 
-@media (min-width: 350px) and (max-width: 570px) {
+@media (min-width: 320px) and (max-width: 570px) {
   footer {
     font-size: 0.8em;
   }

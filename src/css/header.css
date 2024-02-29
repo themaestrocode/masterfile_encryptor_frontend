@@ -59,6 +59,39 @@
   color: rgb(250, 186, 68);
 }
 
+@media (min-width: 320px) and (max-width: 549px) {
+  .header {
+    height: 50px;
+    grid-template-columns: 30px 1fr;
+  }
+
+  .mfe-home-link {
+    margin: 0 20px;
+  }
+  
+  .mfe-logo {
+    height: 8px;
+  }
+
+  .nav-links {
+    margin: 0 20px 0 0;
+    padding: 6px 0;
+  }
+
+  .nav-links li {
+    margin: 0 8px;
+  }
+
+  .nav-links a {
+    font-size: 0.8em;
+  }
+
+  .nav-links a img {
+    height: 14px;
+    margin-right: 2px;
+  }
+}
+
 @media (min-width: 350px) and (max-width: 570px) {
   .header {
     height: 50px;

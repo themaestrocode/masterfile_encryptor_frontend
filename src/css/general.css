@@ -17,7 +17,7 @@ a {
   color: rgb(255, 221, 157);
 }
 
-@media (min-width: 350px) and (max-width: 570px) {
+@media (min-width: 320px) and (max-width: 570px) {
   body {
     padding-top: 50px;
     font-size: 12px;
