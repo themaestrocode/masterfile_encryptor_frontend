@@ -24,8 +24,6 @@
 }
 
 .nav-links {
-  /* flex: 1; */
-  background-color: rgb(10, 10, 10);
   border-radius: 20px;
   margin-left: 20%;
   max-width: 620px;
