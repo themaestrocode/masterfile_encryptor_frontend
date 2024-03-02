@@ -3,7 +3,7 @@
 }
 
 .hero-section img {
-  height: 380px;
+  height: 400px;
   width: 100%;
   object-fit: cover;
   /* position: relative; */
@@ -172,6 +172,12 @@
 .social-icons img:hover {
   height: 36px;
 }
+
+/* @media (min-width: 300px) and (max-width: 359px) {
+  .hero-text {
+    font-size: 1.8rem;
+  }
+} */
 
 @media (min-width: 320px) and (max-width: 570px) {
   .hero-section img {

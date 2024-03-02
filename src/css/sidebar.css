@@ -1,0 +1,72 @@
+.sidebar {
+   background-color: rgb(15, 15, 15);
+   position: fixed;
+   top: 80px;
+   bottom: 0;
+   z-index: 300;
+   border-right: 2px solid rgb(255, 221, 157);
+   display: none;
+}
+
+.menu-icon-div {
+   position: fixed;
+   margin: 20px 0 0 40px;
+   z-index: 100;
+}
+
+.menu-icon-div img {
+   height: 18px;
+   padding: 10px;
+   border-radius: 4px;
+   cursor: pointer;
+}
+
+.menu-icon-div img:hover, .cancel-icon:hover {
+   background-color: black;
+}
+
+.cancel-icon {
+   margin: 20px 20px 0 280px;
+   height: 16px;
+   padding: 10px;
+   border-radius: 4px;
+   cursor: pointer;
+}
+
+.sidebar-links {
+   list-style: none;
+   padding: 20px 50px 20px 50px;
+   margin: 0;
+}
+
+.sidebar-links li {
+   padding: 10px 20px;
+   border-radius: 8px;
+}
+
+.sidebar-links li:hover {
+   background-color: rgb(22, 22, 22);
+   color: rgb(250, 186, 68);
+}
+
+.sidebar-links li a:hover {
+   color: rgb(250, 186, 68);
+}
+
+.signin-button {
+   /* background-color: rgb(255, 221, 157); */
+   background-color: rgb(22, 22, 22);
+   /* border: none; */
+   border: 2px solid rgb(255, 221, 157);
+   color: rgb(255, 221, 157);
+   border-radius: 8px;
+   padding: 12px 60px;
+   font-size: 1rem;
+   font-weight: 700;
+   margin-left: 70px;
+}
+
+.signin-button:hover {
+   /* background-color: rgb(250, 186, 68); */
+   background-color: black;
+}
