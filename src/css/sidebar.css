@@ -10,7 +10,7 @@
 
 .menu-icon-div {
    position: fixed;
-   margin: 20px 0 0 40px;
+   margin: 20px 0 0 20px;
    z-index: 100;
 }
 
@@ -35,13 +35,14 @@
 
 .sidebar-links {
    list-style: none;
-   padding: 20px 50px 20px 50px;
+   padding: 4px 50px 20px 50px;
    margin: 0;
 }
 
 .sidebar-links li {
    padding: 10px 20px;
    border-radius: 8px;
+   cursor: pointer;
 }
 
 .sidebar-links li:hover {
@@ -60,13 +61,48 @@
    border: 2px solid rgb(255, 221, 157);
    color: rgb(255, 221, 157);
    border-radius: 8px;
-   padding: 12px 60px;
+   padding: 16px 60px;
    font-size: 1rem;
    font-weight: 700;
    margin-left: 70px;
+   cursor: pointer;
 }
 
 .signin-button:hover {
    /* background-color: rgb(250, 186, 68); */
    background-color: black;
+}
+
+@media (min-width: 320px) and (max-width: 549px) {
+   .sidebar {
+      top: 50px;
+      border-right: 1px solid rgb(255, 221, 157);
+   }
+
+   .menu-icon-div {
+      margin: 10px;
+   }
+
+   .menu-icon-div img {
+      height: 12px;
+   }
+
+   .cancel-icon {
+      margin: 10px 10px 0 180px;
+      height: 12px;
+   }
+   
+   .sidebar-links {
+      padding: 2px 20px 10px 20px;
+   }
+   
+   .sidebar-links li {
+      padding: 12px 14px;
+   }
+
+   .signin-button {
+      font-size: 1em;
+      margin-left: 30px;
+      padding: 14px 50px;
+   }
 }
