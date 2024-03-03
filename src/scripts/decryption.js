@@ -23,7 +23,6 @@ export function renderDecryptionHTML(formSection) {
 
       decryptFile(selectedFile.files[0], encryptionKey.value);
 
-      selectedFile.value = "";
       encryptionKey.value = "";
    });
 }

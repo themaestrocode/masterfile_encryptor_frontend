@@ -46,7 +46,7 @@
 }
 
 .sidebar-links li:hover {
-   background-color: rgb(22, 22, 22);
+   background-color: rgb(30, 30, 30);
    color: rgb(250, 186, 68);
 }
 
@@ -56,7 +56,7 @@
 
 .signin-button {
    /* background-color: rgb(255, 221, 157); */
-   background-color: rgb(22, 22, 22);
+   background-color: rgb(26, 26, 26);
    /* border: none; */
    border: 2px solid rgb(255, 221, 157);
    color: rgb(255, 221, 157);

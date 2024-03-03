@@ -1,4 +1,4 @@
-import { renderEncryptionHTML } from "./encryption.js";
+import { renderEncryptionHTML, renderPlainTextEncryptionHTML } from "./encryption.js";
 import { renderDecryptionHTML } from "./decryption.js";
 
 const formSection = document.querySelector(".js-form-section");
@@ -7,6 +7,7 @@ renderEncryptionHTML(formSection);
 
 document.querySelector(".js-encrypt-file").addEventListener("click", () => renderEncryptionHTML(formSection));
 document.querySelector(".js-decrypt-file").addEventListener("click", () => renderDecryptionHTML(formSection));
+document.querySelector(".js-encrypt-text").addEventListener("click", () => renderPlainTextEncryptionHTML(formSection));
 
 document.querySelector(".js-copy-cb").addEventListener("click", () => {
    // Create a temporary textarea element to facilitate copying

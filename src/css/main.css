@@ -70,6 +70,17 @@
   cursor: pointer;
 }
 
+.plain-text {
+  width: 300px;
+  height: 100px;
+  border-radius: 4px;
+  font-size: 1rem;
+  text-wrap: wrap;
+  align-items: flex-start;
+  padding: 10px;
+  justify-content: first baseline;
+}
+
 .encryption-key,
 .encryption-key2 {
   padding: 10px 20px;
