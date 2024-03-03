@@ -74,7 +74,7 @@
   }
 
   .mfe-home-link {
-    margin: 0 20px;
+    margin: 0 10px;
   }
   
   .mfe-logo {
@@ -164,9 +164,52 @@
   }
 }
 
-@media (min-width: 1401px) {
+@media (min-width: 1101px) and (max-width: 1400px) {
   .header {
-    grid-template-columns: 120px 1fr;
+    grid-template-columns: 90px 1fr;
+  }
+}
+
+@media (min-width: 1401px) and (max-width: 1800px) {
+  .header {
+    grid-template-columns: 140px 1fr;
+    height: 100px;
+  }
+
+  .mfe-home-link {
+    margin: 0 60px;
+  }
+
+  .mfe-logo {
+    height: 22px;
+  }
+
+  .nav-links a img {
+    height: 36px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  .nav-links {
+    border-radius: 60px;
+    margin-left: 8%;
+    max-width: 1000px;
+    padding: 10px 0;
+  }
+
+  .nav-links li {
+    margin: 0 60px;
+  }
+
+  body {
+    font-size: 20px;
+  }
+  
+}
+
+@media (min-width: 1801px) {
+  .header {
+    grid-template-columns: 100px 1fr;
     height: 160px;
   }
 
@@ -185,8 +228,6 @@
   }
   
   .nav-links {
-    /* flex: 1; */
-    background-color: black;
     border-radius: 60px;
     margin-left: 24%;
     max-width: 1200px;

@@ -70,15 +70,13 @@
   cursor: pointer;
 }
 
-.plain-text {
-  width: 300px;
-  height: 100px;
+.plain-text-input {
+  margin-top: 10px;
+  width: 400px;
+  height: 140px;
   border-radius: 4px;
   font-size: 1rem;
-  text-wrap: wrap;
-  align-items: flex-start;
   padding: 10px;
-  justify-content: first baseline;
 }
 
 .encryption-key,
@@ -122,6 +120,22 @@
 
 .download-link {
   padding: 20px 0;
+}
+
+.text-result-div {
+  margin: 30px 0;
+}
+
+.text-result {
+  text-align: center;
+  word-wrap: break-word;
+  font-size: 0.8rem;
+  padding: 20px 200px;
+}
+
+.text-result-div a img {
+  height: 30px;
+  border-radius: 50%;
 }
 
 .download-link a {
@@ -239,6 +253,12 @@
     cursor: pointer;
   }
 
+  .plain-text-input {
+    width: 240px;
+    height: 100px;
+    font-size: 1em;
+  }
+
   .encryption-key,
   .encryption-key2 {
     width: 160px;
@@ -256,6 +276,15 @@
 
   .download-section {
     font-size: 1em;
+  }
+
+  .text-result {
+    font-size: 0.8em;
+    padding: 10px 40px 0 40px;
+  }
+  
+  .text-result-div a img {
+    height: 20px;
   }
 
   .guide-section {
@@ -301,6 +330,10 @@
     margin: 0 100px;
   }
 
+  .text-result {
+    padding: 20px 100px 10px 100px;
+  }
+
   .guide-section p {
     margin-left: 100px;
     margin-right: 100px;
@@ -322,22 +355,30 @@
 
 }
 
-@media (min-width: 1401px) {
+@media (min-width: 1401px) and (max-width: 1800px) {
+  .hero-section img {
+    height: 500px;
+  }
+
+
+}
+
+@media (min-width: 1801px) {
   .hero-section img {
     height: 800px;
   }
 
   .hero-text {
-    font-size: 7em;
+    font-size: 5em;
   }
 
   .about-section {
-    padding: 40px 500px;
+    padding: 30px 200px;
     font-size: 1em;
   }
 
   .important-section p {
-    margin: 0 500px;
+    margin: 0 200px;
   }
 
   .form-section {
@@ -348,6 +389,15 @@
   .selected-file {
     padding: 20px;
     font-size: 1em;
+  }
+
+  .plain-text-input {
+    font-size: 1em;
+  }
+
+  .plain-text-input {
+    width: 700px;
+    height: 240px;
   }
 
   .encryption-key,
@@ -367,7 +417,7 @@
   }
 
   .guide-section p {
-    margin: 40px 500px;
+    margin: 40px 200px;
   }
 
   .social-icons img {

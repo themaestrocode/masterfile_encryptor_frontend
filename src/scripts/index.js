@@ -33,7 +33,6 @@ menuIcon.addEventListener("click", () => {
 });
 
 const canceIcon = document.querySelector(".js-cancel-icon");
-
 canceIcon.addEventListener("click", () => {
    sidebar.style.display = "none";
    mainSection.style.opacity = "1";

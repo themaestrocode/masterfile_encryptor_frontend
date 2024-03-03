@@ -55,11 +55,8 @@
 }
 
 .signin-button {
-   /* background-color: rgb(255, 221, 157); */
-   background-color: rgb(26, 26, 26);
-   /* border: none; */
-   border: 2px solid rgb(255, 221, 157);
-   color: rgb(255, 221, 157);
+   background: linear-gradient(to bottom, rgb(255, 221, 157), rgb(252, 181, 50));
+   border: none;
    border-radius: 8px;
    padding: 16px 60px;
    font-size: 1rem;
@@ -70,7 +67,7 @@
 
 .signin-button:hover {
    /* background-color: rgb(250, 186, 68); */
-   background-color: black;
+   background: linear-gradient(to bottom, rgb(247, 191, 89), rgb(228, 153, 13));
 }
 
 @media (min-width: 320px) and (max-width: 549px) {
@@ -104,5 +101,42 @@
       font-size: 1em;
       margin-left: 30px;
       padding: 14px 50px;
+   }
+}
+
+@media (min-width: 1401px) and (max-width: 1800px) {
+   .cancel-icon {
+      margin-top: 40px;
+      height: 16px;
+   }
+ 
+ }
+
+@media (min-width: 1801px) {
+   .menu-icon-div img {
+      height: 36px;
+      padding: 40px;
+   }
+
+   .sidebar-links {
+      list-style: none;
+      padding: 40px 100px 20px 100px;
+   }
+
+   .sidebar-links li {
+      padding: 20px 60px;
+   }
+
+   .cancel-icon {
+      padding: 20px;
+      height: 36px;
+      margin: 100px 20px 0 550px;
+   }
+
+   .signin-button {
+      font-size: 1em;
+      padding: 30px 120px;
+      margin-left: 140px;
+      margin-top: 20px;
    }
 }
