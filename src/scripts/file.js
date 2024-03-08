@@ -7,13 +7,16 @@ export const downloadSection = document.querySelector(".js-download-section");
 
 //ENCRYPT FILE
 export function encryptFile(file, encryptionKey, encryptionKey2) {
-   if (!validateKeys(encryptionKey, encryptionKey2)) return;
+   if (encryptionKey !== encryptionKey2) {
+      displayErrorMessage("Encryption keys do not match!");
+      return;
+   }
 
    formData = new FormData();
    formData.append("file", file);
    formData.append("encryptionKey", encryptionKey);
 
-   urlString = "http://localhost:8060/api/v1/masterfileencryptor/encrypt-file";
+   urlString = "http://localhost:8060/api/v1/masterfileencryptor/encrypt-file/jasypt";
    request = new Request(urlString, { method: "POST", body: formData });
 
    doFetchForFile(request);
@@ -25,7 +28,7 @@ export function decryptFile(file, encryptionKey) {
    formData.append("file", file);
    formData.append("encryptionKey", encryptionKey);
 
-   urlString = "http://localhost:8060/api/v1/masterfileencryptor/decrypt-file";
+   urlString = "http://localhost:8060/api/v1/masterfileencryptor/decrypt-file/jasypt";
    request = new Request(urlString, { method: "POST", body: formData });
 
    doFetchForFile(request);
@@ -33,7 +36,10 @@ export function decryptFile(file, encryptionKey) {
 
 // ENCRYPT PLAIN TEXT
 export function encryptText(text, encryptionKey, encryptionKey2) {
-   if (!validateKeys(encryptionKey, encryptionKey2)) return;
+   if (encryptionKey !== encryptionKey2) {
+      displayErrorMessage("Encryption keys do not match!");
+      return;
+   }
 
    const textObject = { text, encryptionKey };
 
@@ -99,22 +105,18 @@ function doFetchForText(request) {
       .catch(console.error);
 }
 
-function validateKeys(encryptionKey, encryptionKey2) {
-   if (encryptionKey !== encryptionKey2) {
-      downloadSection.innerHTML = "<p>Encryption keys do not match!</p>";
-      downloadSection.classList.add("password-error-message");
-      return false;
-   }
-   return true;
+function displayErrorMessage(errorMessage) {
+   downloadSection.innerHTML = `<p>${errorMessage}</p>`;
+   downloadSection.classList.add("error-message");
 }
 
 function generateDownloadLink(url, filename) {
-   downloadSection.classList.contains("password-error-message") && downloadSection.classList.remove("password-error-message");
+   downloadSection.classList.contains("error-message") && downloadSection.classList.remove("password-error-message");
 
    downloadSection.innerHTML = `
       <p>Your file is ready!</p>
       <div class="download-link">
-         <a href="${url}" download="${filename}">Download encrypted file</a>
+         <a href="${url}" download="${filename}">Download your file</a>
       </div>
    `;
 }
@@ -139,7 +141,7 @@ function diaplayTextResult(textResult) {
       document.body.appendChild(textResultArea);
       textResultArea.select();
       document.execCommand("copy");
-      
+
       document.body.removeChild(textResultArea);
    });
 }

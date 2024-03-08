@@ -28,7 +28,7 @@ a {
 
 @media (min-width: 1401px) and (max-width: 1800px) {
   body {
-    top: 20px;
+    font-size: 18px;
   }
 }
 

@@ -1,4 +1,4 @@
-import { renderEncryptionHTML, renderPlainTextEncryptionHTML } from "./encryption.js";
+import { renderEncryptionHTML, renderTextEncryptionHTML } from "./encryption.js";
 import { renderDecryptionHTML } from "./decryption.js";
 
 const formSection = document.querySelector(".js-form-section");
@@ -7,7 +7,7 @@ renderEncryptionHTML(formSection);
 
 document.querySelector(".js-encrypt-file").addEventListener("click", () => renderEncryptionHTML(formSection));
 document.querySelector(".js-decrypt-file").addEventListener("click", () => renderDecryptionHTML(formSection));
-document.querySelector(".js-encrypt-text").addEventListener("click", () => renderPlainTextEncryptionHTML(formSection));
+document.querySelector(".js-encrypt-text").addEventListener("click", () => renderTextEncryptionHTML(formSection));
 
 document.querySelector(".js-copy-cb").addEventListener("click", () => {
    // Create a temporary textarea element to facilitate copying
@@ -23,7 +23,7 @@ document.querySelector(".js-copy-cb").addEventListener("click", () => {
    document.body.removeChild(textarea);
 });
 
-const menuIcon = document.querySelector(".js-menu-icon-image");
+const menuIcon = document.querySelector(".js-menu-icon");
 const sidebar = document.querySelector(".js-sidebar");
 const mainSection = document.querySelector("main");
 

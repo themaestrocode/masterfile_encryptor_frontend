@@ -32,7 +32,7 @@ export function renderEncryptionHTML(formSection) {
    });
 }
 
-export function renderPlainTextEncryptionHTML(formSection) {
+export function renderTextEncryptionHTML(formSection) {
    downloadSection.innerHTML = "";
 
    formSection.innerHTML = `

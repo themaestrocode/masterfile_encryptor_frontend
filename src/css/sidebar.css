@@ -8,23 +8,6 @@
    display: none;
 }
 
-.menu-icon-div {
-   position: fixed;
-   margin: 20px 0 0 20px;
-   z-index: 100;
-}
-
-.menu-icon-div img {
-   height: 18px;
-   padding: 10px;
-   border-radius: 4px;
-   cursor: pointer;
-}
-
-.menu-icon-div img:hover, .cancel-icon:hover {
-   background-color: black;
-}
-
 .cancel-icon {
    margin: 20px 20px 0 280px;
    height: 16px;
@@ -32,6 +15,10 @@
    border-radius: 4px;
    cursor: pointer;
 }
+
+.cancel-icon:hover {
+   background-color: black;
+ }
 
 .sidebar-links {
    list-style: none;
@@ -41,23 +28,22 @@
 
 .sidebar-links li {
    padding: 10px 20px;
-   border-radius: 8px;
+   border-radius: 6px;
    cursor: pointer;
 }
 
 .sidebar-links li:hover {
    background-color: rgb(30, 30, 30);
-   color: rgb(250, 186, 68);
 }
 
-.sidebar-links li a:hover {
+.sidebar-links li:hover a {
    color: rgb(250, 186, 68);
 }
 
 .signin-button {
    background: linear-gradient(to bottom, rgb(255, 221, 157), rgb(252, 181, 50));
    border: none;
-   border-radius: 8px;
+   border-radius: 4px;
    padding: 16px 60px;
    font-size: 1rem;
    font-weight: 700;
@@ -70,7 +56,7 @@
    background: linear-gradient(to bottom, rgb(247, 191, 89), rgb(228, 153, 13));
 }
 
-@media (min-width: 320px) and (max-width: 549px) {
+@media (min-width: 320px) and (max-width: 570px) {
    .sidebar {
       top: 50px;
       border-right: 1px solid rgb(255, 221, 157);
@@ -108,6 +94,10 @@
    .cancel-icon {
       margin-top: 40px;
       height: 16px;
+   }
+
+   .signin-button {
+      font-size: 1em;
    }
  
  }
