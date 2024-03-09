@@ -4,7 +4,7 @@ export function renderDecryptionHTML(formSection) {
    downloadSection.innerHTML = "";
 
    formSection.innerHTML = `
-      <form class="file-data-form js-decryption-form" enctype="multipart/form-data">
+      <form class="decryption-form js-decryption-form" enctype="multipart/form-data">
          <label for="file">Select File</label><br>
          <input class="selected-file js-selected-file" type="file" name="file" required><br>
 
@@ -27,25 +27,25 @@ export function renderDecryptionHTML(formSection) {
    });
 }
 
-export function renderPlainTextDecryptionHTML(formSection) {
+export function renderTextDecryptionHTML(formSection) {
    downloadSection.innerHTML = "";
 
    formSection.innerHTML = `
-      <form class="file-data-form js-encryption-form">
-         <label for="text">Enter plain text</label><br>
-         <textarea class="plain-text-input js-plain-text-input" name="text" placeholder="Type or paste your text here" required></textarea><br>
+      <form class="decryption-form js-decryption-form">
+         <label for="text">Enter text</label><br>
+         <textarea class="text-input js-text-input" name="text" placeholder="Type or paste your text here" required></textarea><br>
 
          <label for="encryptionKey">Encrypt with a key</label><br>
          <input class="encryption-key js-encryption-key" type="password" name="encryptionKey" placeholder="encryption key" required><br>
 
-         <button class="encrypt-button js-encrypt-button" type="submit">Encrypt text</button>
+         <button class="decrypt-button js-decrypt-button" type="submit">Decrypt text</button>
       </form>
    `;
 
-   elementSelector(".js-encryption-form").addEventListener("submit", (event) => {
+   document.querySelector(".js-decryption-form").addEventListener("submit", (event) => {
       event.preventDefault();
 
-      const text = document.querySelector(".js-plain-text-input");
+      const text = document.querySelector(".js-text-input");
       const encryptionKey = document.querySelector(".js-encryption-key");
 
       decryptText(text.value, encryptionKey.value);

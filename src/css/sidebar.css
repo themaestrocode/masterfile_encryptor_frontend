@@ -52,7 +52,6 @@
 }
 
 .signin-button:hover {
-   /* background-color: rgb(250, 186, 68); */
    background: linear-gradient(to bottom, rgb(247, 191, 89), rgb(228, 153, 13));
 }
 

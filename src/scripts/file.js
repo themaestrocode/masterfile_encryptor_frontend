@@ -1,50 +1,44 @@
-let formData;
 let filename = "";
-let urlString = "";
-let request;
+const changeFileExtension = (filename) => filename.replace(/\.[^/.]+$/, ".enc");
 
 export const downloadSection = document.querySelector(".js-download-section");
 
 //ENCRYPT FILE
 export function encryptFile(file, encryptionKey, encryptionKey2) {
-   if (encryptionKey !== encryptionKey2) {
-      displayErrorMessage("Encryption keys do not match!");
-      return;
-   }
+   if (!validateFileFormData(file, encryptionKey, encryptionKey2)) return;
 
-   formData = new FormData();
+   const formData = new FormData();
    formData.append("file", file);
    formData.append("encryptionKey", encryptionKey);
 
-   urlString = "http://localhost:8060/api/v1/masterfileencryptor/encrypt-file/jasypt";
-   request = new Request(urlString, { method: "POST", body: formData });
+   const urlString = "http://localhost:8060/api/v1/masterfileencryptor/encrypt-file";
+   const request = new Request(urlString, { method: "POST", body: formData });
 
    doFetchForFile(request);
 }
 
 // DECRYPT FILE
 export function decryptFile(file, encryptionKey) {
-   formData = new FormData();
+   if (!validateFileFormData(file, encryptionKey, encryptionKey)) return;
+
+   const formData = new FormData();
    formData.append("file", file);
    formData.append("encryptionKey", encryptionKey);
 
-   urlString = "http://localhost:8060/api/v1/masterfileencryptor/decrypt-file/jasypt";
-   request = new Request(urlString, { method: "POST", body: formData });
+   const urlString = "http://localhost:8060/api/v1/masterfileencryptor/decrypt-file";
+   const request = new Request(urlString, { method: "POST", body: formData });
 
    doFetchForFile(request);
 }
 
 // ENCRYPT PLAIN TEXT
 export function encryptText(text, encryptionKey, encryptionKey2) {
-   if (encryptionKey !== encryptionKey2) {
-      displayErrorMessage("Encryption keys do not match!");
-      return;
-   }
+   if (!validateTextFormData(text, encryptionKey, encryptionKey2)) return;
 
    const textObject = { text, encryptionKey };
 
-   urlString = "http://localhost:8060/api/v1/masterfileencryptor/encrypt-text";
-   request = new Request(urlString, {
+   const urlString = "http://localhost:8060/api/v1/masterfileencryptor/encrypt-text";
+   const request = new Request(urlString, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(textObject)
@@ -55,10 +49,12 @@ export function encryptText(text, encryptionKey, encryptionKey2) {
 
 //DECRYPT PLAIN TEXT
 export function decryptText(text, encryptionKey) {
+   if (!validateTextFormData(text, encryptionKey, encryptionKey)) return;
+
    const textObject = { text, encryptionKey };
 
-   urlString = "http://localhost:8060/api/v1/masterfileencryptor/decrypt-text";
-   request = new Request(urlString, {
+   const urlString = "http://localhost:8060/api/v1/masterfileencryptor/decrypt-text";
+   const request = new Request(urlString, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(textObject)
@@ -71,14 +67,22 @@ export function decryptText(text, encryptionKey) {
 function doFetchForFile(request) {
    fetch(request)
       .then(response => {
-         if (!response.ok) throw new Error(`Invalid response: ${response.status} - ${response.statusText}`);
+         console.log(response);
+         let validResponse = false;
+
+         if (response.status === 200 && response.ok) validResponse = true;
+         else if (response.status === 400) displayErrorMessage("The provided key is invalid/incorrect!");
+         else if (response.status === 404) displayErrorMessage("File attachment not found!");
+         else if (response.status === 413) displayErrorMessage("File size limit exceeded!");
+         else if (response.status === 422) displayErrorMessage("Your file could not be processed. Your key may be invalid/incorrect.");
+         else displayErrorMessage("Some error occured. Please try again.");
+
+         if (!validResponse) throw new Error(`Invalid response: ${response.status} - ${response.statusText}`);
 
          const disposition = response.headers.get("Content-Disposition");
 
          if (disposition && disposition.includes("attachment")) {
-            // Extract filename using a regular expression
-            const matches = /filename="(.+?)"/.exec(disposition);
-            filename = matches ? matches[1] : 'downloaded-file';
+            filename = extractFileName(disposition);
 
             return response.blob();
          }
@@ -87,14 +91,21 @@ function doFetchForFile(request) {
          const url = window.URL.createObjectURL(blob);
          generateDownloadLink(url, filename);
       })
-      .catch(console.warn);
+      .catch(console.error);
 }
 
 // FETCH REQUEST FOR PLAIN TEXT
 function doFetchForText(request) {
    fetch(request)
       .then(response => {
-         if (!response.ok) throw new Error(`Invalid response: ${response.status} - ${response.statusText}`);
+         console.log(response);
+         let validResponse = false;
+
+         if (response.status === 200 && response.ok) validResponse = true;
+         // else if (response.status === 400) displayErrorMessage("The provided key is invalid/incorrect!");
+         else displayErrorMessage("Some error occured. Please try again and ensure you are using the right key.");
+
+         if (!validResponse) throw new Error(`Invalid response: ${response.status} - ${response.statusText}`);
 
          return response.text();
       })
@@ -105,13 +116,53 @@ function doFetchForText(request) {
       .catch(console.error);
 }
 
+function validateFileFormData(file, encryptionKey, encryptionKey2) {
+   const maxSize = 200 * 1024 * 1024; // 200MB in bytes
+
+   if (file.size > maxSize) {
+      alert("File size exceeds the maximum limit of 200MB.");
+      return false;
+   }
+   else if (encryptionKey !== encryptionKey2) {
+      displayErrorMessage("Encryption keys do not match!");
+      return false;
+   }
+
+   return true;
+}
+
+function validateTextFormData(text, encryptionKey, encryptionKey2) {
+   if (text.trim().length === 0) {
+      alert("Cannot encrypt/decrypt empty text");
+      return false;
+   }
+   else if (encryptionKey !== encryptionKey2) {
+      displayErrorMessage("Encryption keys do not match!");
+      return false;
+   }
+
+   return true;
+}
+
+function extractFileName (disposition) {
+   const feoSelection = document.querySelector(".js-feo").value;
+
+   // Extract filename using a regular expression
+   const matches = /filename="(.+?)"/.exec(disposition);
+   const filename = matches ? matches[1] : 'downloaded-file';
+
+   if (feoSelection === "enc") filename = changeFileExtension(filename);
+
+   return filename;
+}
+
 function displayErrorMessage(errorMessage) {
    downloadSection.innerHTML = `<p>${errorMessage}</p>`;
    downloadSection.classList.add("error-message");
 }
 
 function generateDownloadLink(url, filename) {
-   downloadSection.classList.contains("error-message") && downloadSection.classList.remove("password-error-message");
+   downloadSection.classList.contains("error-message") && downloadSection.classList.remove("error-message");
 
    downloadSection.innerHTML = `
       <p>Your file is ready!</p>
@@ -122,7 +173,7 @@ function generateDownloadLink(url, filename) {
 }
 
 function diaplayTextResult(textResult) {
-   downloadSection.classList.contains("password-error-message") && downloadSection.classList.remove("password-error-message");
+   downloadSection.classList.contains("error-message") && downloadSection.classList.remove("error-message");
 
    downloadSection.innerHTML = `
       <div class="text-result-div">
@@ -134,7 +185,8 @@ function diaplayTextResult(textResult) {
       </div>
    `;
 
-   document.querySelector(".js-copy-text-result").addEventListener("click", () => {
+   const copyButton = document.querySelector(".js-copy-text-result");
+   copyButton.addEventListener("click", () => {
       const textResultArea = document.createElement("textarea");
       textResultArea.value = textResult;
 
@@ -144,4 +196,5 @@ function diaplayTextResult(textResult) {
 
       document.body.removeChild(textResultArea);
    });
+   copyButton.style.cursor = "pointer";
 }
