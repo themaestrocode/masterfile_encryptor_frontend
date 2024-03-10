@@ -2,13 +2,6 @@ import { renderEncryptionHTML, renderTextEncryptionHTML } from "./encryption.js"
 import { renderDecryptionHTML, renderTextDecryptionHTML } from "./decryption.js";
 
 const formSection = document.querySelector(".js-form-section");
-changeFileExtension("file.me.java");
-function changeFileExtension(file) {
-   const newFileName = file.replace(/\.[^/.]+$/, ".enc");
-
-   console.log(("Original File Name: " + file));
-   console.log("New File Name: " + newFileName);
-}
 
 renderEncryptionHTML(formSection);
 

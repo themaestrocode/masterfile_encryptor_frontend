@@ -1,15 +1,15 @@
 let filename = "";
-const changeFileExtension = (filename) => filename.replace(/\.[^/.]+$/, ".enc");
 
 export const downloadSection = document.querySelector(".js-download-section");
 
 //ENCRYPT FILE
-export function encryptFile(file, encryptionKey, encryptionKey2) {
+export function encryptFile(file, encryptionKey, encryptionKey2, feoSelection) {
    if (!validateFileFormData(file, encryptionKey, encryptionKey2)) return;
 
    const formData = new FormData();
    formData.append("file", file);
    formData.append("encryptionKey", encryptionKey);
+   feoSelection === "DYNAMIC" && formData.append("extensionMode", feoSelection);
 
    const urlString = "http://localhost:8060/api/v1/masterfileencryptor/encrypt-file";
    const request = new Request(urlString, { method: "POST", body: formData });
@@ -145,13 +145,9 @@ function validateTextFormData(text, encryptionKey, encryptionKey2) {
 }
 
 function extractFileName (disposition) {
-   const feoSelection = document.querySelector(".js-feo").value;
-
    // Extract filename using a regular expression
    const matches = /filename="(.+?)"/.exec(disposition);
    const filename = matches ? matches[1] : 'downloaded-file';
-
-   if (feoSelection === "enc") filename = changeFileExtension(filename);
 
    return filename;
 }

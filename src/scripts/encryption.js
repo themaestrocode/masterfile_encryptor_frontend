@@ -15,10 +15,10 @@ export function renderEncryptionHTML(formSection) {
          <input class="encryption-key2 js-encryption-key2" type="password" name="encryptionKey2" placeholder="confirm encryption key" required><br>
 
          <div class="feo-section">
-            Choose file extension
+            <div class="feo-section-header">Choose prefered file extension mode</div>
             <select class="feo js-feo">
-               <option selected value="original">original</option>
-               <option value="enc">.enc</option>
+               <option selected value="DYNAMIC">DYNAMIC EXTENSION</option>
+               <option value="FIXED">FIXED EXTENSION</option>
             </select>
          </div>
          <button class="encrypt-button js-encrypt-button" type="submit">Encrypt file</button>
@@ -31,8 +31,9 @@ export function renderEncryptionHTML(formSection) {
       const selectedFile = document.querySelector(".js-selected-file");
       const encryptionKey = document.querySelector(".js-encryption-key");
       const encryptionKey2 = document.querySelector(".js-encryption-key2");
+      const feoSelection = document.querySelector(".js-feo");
 
-      encryptFile(selectedFile.files[0], encryptionKey.value, encryptionKey2.value);
+      encryptFile(selectedFile.files[0], encryptionKey.value, encryptionKey2.value, feoSelection.value);
 
       encryptionKey.value = "";
       encryptionKey2.value = "";
