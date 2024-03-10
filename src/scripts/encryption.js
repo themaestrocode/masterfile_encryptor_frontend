@@ -15,10 +15,10 @@ export function renderEncryptionHTML(formSection) {
          <input class="encryption-key2 js-encryption-key2" type="password" name="encryptionKey2" placeholder="confirm encryption key" required><br>
 
          <div class="feo-section">
-            <div class="feo-section-header">Choose prefered file extension mode</div>
+            <div class="feo-section-header">Choose prefered MFE mode</div>
             <select class="feo js-feo">
-               <option selected value="DYNAMIC">DYNAMIC EXTENSION</option>
-               <option value="FIXED">FIXED EXTENSION</option>
+               <option selected value="DYNAMIC">DYNAMIC ENCRYPTION</option>
+               <option value="FIXED">FIXED ENCRYPTION</option>
             </select>
          </div>
          <button class="encrypt-button js-encrypt-button" type="submit">Encrypt file</button>

@@ -144,7 +144,7 @@
          <h2>Usage Guide</h2>
          <p>
             Master File Encryptor is an easy to use encryption tool that gets the
-            job done with just 2 clicks.
+            job done with just a few clicks.
          </p>
          <h3>File Encryption</h3>
          <p>
@@ -158,11 +158,22 @@
          </p>
          <h3>File Decryption</h3>
          <p>
-            To decrypt a file, simply select the encrypted file and provide the
-            encryption key with which the file was encrypted. It doesn't matter if
-            the name of the file had been changed; so far the right key was
-            provided, your file will be decrypted and a download button will be
-            generated.
+            To decrypt a file, simply select an already encrypted file and provide the
+            key with which the file was encrypted. Likewise, click the "Decrypt file" button
+            and a download button will be generated for you to download the decrypted file.
+         </p>
+         <h3>Choosing a MasterFile Encryption Mode</h3>
+         <p>
+            The MasterFile Enryption Modes are custom encryption modes for efficient and seamless
+            encryption of files and easy file decryption to its original format and file type.
+            If you chose the <b>Dynamic Encryption Mode</b>, the original file type and format will be automatically
+            detected and attached back to your file incase there has been any change since you encrypted it.
+            However, using this mode results in a slightly higher file size compared to the Fixed mode.
+            If you chose the <b>Fixed Encryption Mode</b> the original file type and format cannot be automatically
+            detected during decryption. As a result, the size of the resulting file is lesser compared to the Dynamic mode.<br><br>
+
+            As an example, if you encrypt a PDF file and you at some point changed the ".pdf" extension
+            to ".doc", Dynamic mode will fix it back for you during decryption, but Fixed mode cannot. 
          </p>
       </div>
 
@@ -213,8 +224,6 @@
 
    <!-- javascript attachments -->
    <script type="module" src="scripts/index.js"></script>
-   <!-- <script type="module" src="scripts/encryption.js"></script> -->
-   <!-- <script type="module" src="scripts/decryption.js"></script> -->
 </body>
 
 </html>
