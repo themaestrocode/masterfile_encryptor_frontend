@@ -1,6 +1,7 @@
-import { decryptFile, decryptText, downloadSection } from "./file.js";
+import { decryptFile, decryptText } from "./file.js";
+import { formSection, downloadSection } from "./utils.js";
 
-export function renderDecryptionHTML(formSection) {
+export function renderDecryptionHTML() {
    downloadSection.innerHTML = "";
 
    formSection.innerHTML = `
@@ -27,7 +28,7 @@ export function renderDecryptionHTML(formSection) {
    });
 }
 
-export function renderTextDecryptionHTML(formSection) {
+export function renderTextDecryptionHTML() {
    downloadSection.innerHTML = "";
 
    formSection.innerHTML = `

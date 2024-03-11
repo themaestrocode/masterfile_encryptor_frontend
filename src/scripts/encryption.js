@@ -1,6 +1,7 @@
-import { encryptFile, encryptText, downloadSection } from "./file.js";
+import { encryptFile, encryptText } from "./file.js";
+import { formSection, downloadSection } from "./utils.js";
 
-export function renderEncryptionHTML(formSection) {
+export function renderEncryptionHTML() {
    downloadSection.innerHTML = "";
 
    formSection.innerHTML = `
@@ -40,7 +41,7 @@ export function renderEncryptionHTML(formSection) {
    });
 }
 
-export function renderTextEncryptionHTML(formSection) {
+export function renderTextEncryptionHTML() {
    downloadSection.innerHTML = "";
 
    formSection.innerHTML = `

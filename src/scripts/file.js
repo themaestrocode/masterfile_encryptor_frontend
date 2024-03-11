@@ -1,8 +1,6 @@
-import { showProgressBar, hideProgressBar } from "./utils.js";
+import { showProgressBar, hideProgressBar, downloadSection } from "./utils.js";
 
 let filename = "";
-
-export const downloadSection = document.querySelector(".js-download-section");
 
 //ENCRYPT FILE
 export function encryptFile(file, encryptionKey, encryptionKey2, feoSelection) {
@@ -172,6 +170,7 @@ function generateDownloadLink(url, filename) {
    downloadSection.classList.contains("error-message") && downloadSection.classList.remove("error-message");
 
    downloadSection.innerHTML = `
+      <p class="filename">${filename}</p>
       <p>Your file is ready!</p>
       <div class="download-link">
          <a href="${url}" download="${filename}">Download your file</a>

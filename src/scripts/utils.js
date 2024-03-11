@@ -1,7 +1,8 @@
-const progressBarSection = document.querySelector(".js-progress-bar-section-container");
+export const formSection = document.querySelector(".js-form-section");
+export const downloadSection = document.querySelector(".js-download-section");
 
 export function showProgressBar () {
-   progressBarSection.innerHTML = `
+   formSection.innerHTML = `
       <div class="progress-bar-section">
          <label for="progress-bar">Working on your file...</label><br>
          <progress id="progress-bar" class="progress-bar js-progress-bar" max="100"></progress>
@@ -10,5 +11,5 @@ export function showProgressBar () {
 }
 
 export function hideProgressBar () {
-   progressBarSection.innerHTML = "";
+   formSection.innerHTML = "";
 }

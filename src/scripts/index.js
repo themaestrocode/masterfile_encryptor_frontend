@@ -1,14 +1,12 @@
 import { renderEncryptionHTML, renderTextEncryptionHTML } from "./encryption.js";
 import { renderDecryptionHTML, renderTextDecryptionHTML } from "./decryption.js";
 
-const formSection = document.querySelector(".js-form-section");
+renderEncryptionHTML();
 
-renderEncryptionHTML(formSection);
-
-document.querySelector(".js-encrypt-file").addEventListener("click", () => renderEncryptionHTML(formSection));
-document.querySelector(".js-decrypt-file").addEventListener("click", () => renderDecryptionHTML(formSection));
-document.querySelector(".js-encrypt-text").addEventListener("click", () => renderTextEncryptionHTML(formSection));
-document.querySelector(".js-decrypt-text").addEventListener("click", () => renderTextDecryptionHTML(formSection));
+document.querySelector(".js-encrypt-file").addEventListener("click", () => renderEncryptionHTML());
+document.querySelector(".js-decrypt-file").addEventListener("click", () => renderDecryptionHTML());
+document.querySelector(".js-encrypt-text").addEventListener("click", () => renderTextEncryptionHTML());
+document.querySelector(".js-decrypt-text").addEventListener("click", () => renderTextDecryptionHTML());
 
 const menuIcon = document.querySelector(".js-menu-icon");
 const sidebar = document.querySelector(".js-sidebar");

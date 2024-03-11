@@ -162,10 +162,6 @@
   background: linear-gradient(to bottom, rgb(247, 191, 89), rgb(228, 153, 13));
 }
 
-.progress-bar-section {
-  margin-top: 20px;
-}
-
 .download-section {
   background-color: rgb(8, 8, 8);
   margin: 0 auto;
@@ -190,6 +186,13 @@
   word-wrap: break-word;
   font-size: 0.8rem;
   padding: 20px 200px;
+}
+
+.filename {
+  text-align: center;
+  word-wrap: break-word;
+  font-size: 0.8em;
+  padding: 0 200px;
 }
 
 .text-result-div a img {
@@ -360,6 +363,11 @@
     font-size: 0.8em;
     padding: 10px 40px 0 40px;
   }
+
+  .filename {
+    font-size: 0.8em;
+    padding: 0 40px;
+  }
   
   .text-result-div a img {
     height: 20px;
@@ -432,6 +440,10 @@
 
   .text-result {
     padding: 20px 100px 10px 100px;
+  }
+
+  .filename {
+    padding: 0 100px;
   }
 
   .guide-section p {
