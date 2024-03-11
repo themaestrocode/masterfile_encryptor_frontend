@@ -87,7 +87,7 @@
             encryption tool ensures data privacy and puts you in control of your
             data and files. Whatever the file type or extension (JPEG, PNG, PDF,
             TXT, MP3, MP4, and more), we got you covered!
-            <a href="#d" style="display: block">Try for free.</a>
+            <a href="#encryption-op-section" style="display: block">Try for free.</a>
          </p>
       </div>
 
@@ -102,29 +102,29 @@
       </div>
 
       <!-- FILE ENCRYPTION FORM SECTION -->
-      <div class="encryption-op-section js-encryption-op-section">
+      <div id="encryption-op-section" class="encryption-op-section js-encryption-op-section">
          <div class="encryption-nav js-encryption-nav">
             <ul class="encryption-links">
                <li>
-                  <a href="#d" class="encrypt-file js-encrypt-file">
+                  <a href="#encryption-op-section" class="encrypt-file js-encrypt-file">
                      <img src="images/icons/mylock.svg" alt="lock-icon" />
                      Encrypt File
                   </a>
                </li>
                <li>
-                  <a href="#d" class="decrypt-file js-decrypt-file">
+                  <a href="#encryption-op-section" class="decrypt-file js-decrypt-file">
                      <img src="images/icons/myunlock1.svg" alt="unlock-icon" />
                      Decrypt File
                   </a>
                </li>
                <li>
-                  <a href="#d" class="encrypt-text js-encrypt-text">
+                  <a href="#encryption-op-section" class="encrypt-text js-encrypt-text">
                      <img src="images/icons/plaintext.svg" alt="signin-icon" />
                      Encrypt Text
                   </a>
                </li>
                <li>
-                  <a href="#d" class="decrypt-text js-decrypt-text">
+                  <a href="#encryption-op-section" class="decrypt-text js-decrypt-text">
                      <img src="images/icons/plaintext.svg" alt="signin-icon" />
                      Decrypt Text
                   </a>
@@ -133,8 +133,8 @@
          </div>
 
          <div class="form-section js-form-section"></div>
+         <div class="progress-bar-section-container js-progress-bar-section-container"></div>
       </div>
-
 
       <!-- DOWNLOAD SECTION -->
       <div class="download-section js-download-section"></div>
@@ -148,13 +148,11 @@
          </p>
          <h3>File Encryption</h3>
          <p>
-            To encrypt a file, select the file and provide an encryption key to
-            secure access to the file. The encryption key is very important, so we
-            advice you keep it save for decryption purpose. Next, click the
-            "Encrypt file" button and a download button will be generated for you
-            to download the encrypted file. Again, we do not save any encryption
-            key in our system; this is to say that you are in full control of the
-            content of your file.
+            To encrypt a file, select the file and provide an encryption key to secure access to the file.
+            The encryption key is very important, so we advice you keep it save for decryption purpose.
+            Next, click the "Encrypt file" button and a download button will be generated for you to download
+            the encrypted file. Again, we do not save any encryption key in our system; this is to say that
+            you are in full control of the content of your file.
          </p>
          <h3>File Decryption</h3>
          <p>
@@ -164,16 +162,17 @@
          </p>
          <h3>Choosing a MasterFile Encryption Mode</h3>
          <p>
-            The MasterFile Enryption Modes are custom encryption modes for efficient and seamless
-            encryption of files and easy file decryption to its original format and file type.
-            If you chose the <b>Dynamic Encryption Mode</b>, the original file type and format will be automatically
-            detected and attached back to your file incase there has been any change since you encrypted it.
-            However, using this mode results in a slightly higher file size compared to the Fixed mode.
-            If you chose the <b>Fixed Encryption Mode</b> the original file type and format cannot be automatically
-            detected during decryption. As a result, the size of the resulting file is lesser compared to the Dynamic mode.<br><br>
+            The MasterFile Enryption Modes are custom encryption modes for efficient and seamless encryption of files
+            and easy file decryption to its original format and file type.<br>If you choose the <b>Dynamic Encryption Mode</b>,
+            during decryption, the original file type and format will be automatically detected and attached back to your
+            file incase there has been any changes since you encrypted it. However, using this mode results in a slightly
+            higher file size compared to the Fixed mode because it uses Base64 encoding.
+            If you choose the <b>Fixed Encryption Mode</b> the original file type and format cannot be automatically
+            detected during decryption. This mode does not use Base64 encoding, and as a result, the size of the resulting
+            file is lesser compared to the Dynamic mode.<br><br>
 
             As an example, if you encrypt a PDF file and you at some point changed the ".pdf" extension
-            to ".doc", Dynamic mode will fix it back for you during decryption, but Fixed mode cannot. 
+            to ".jpg" for any reason, Dynamic mode will fix it back for you during decryption, but Fixed mode cannot. 
          </p>
       </div>
 

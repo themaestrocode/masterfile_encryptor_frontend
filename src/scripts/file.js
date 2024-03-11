@@ -1,3 +1,5 @@
+import { showProgressBar, hideProgressBar } from "./utils.js";
+
 let filename = "";
 
 export const downloadSection = document.querySelector(".js-download-section");
@@ -9,12 +11,12 @@ export function encryptFile(file, encryptionKey, encryptionKey2, feoSelection) {
    const formData = new FormData();
    formData.append("file", file);
    formData.append("encryptionKey", encryptionKey);
-   feoSelection === "DYNAMIC" && formData.append("extensionMode", feoSelection);
+   feoSelection === "DYNAMIC" && formData.append("encryptionMode", feoSelection);
 
    const urlString = "http://localhost:8060/api/v1/masterfileencryptor/encrypt-file";
    const request = new Request(urlString, { method: "POST", body: formData });
 
-   doFetchForFile(request);
+   doFetchForFile(request, "enc");
 }
 
 // DECRYPT FILE
@@ -28,7 +30,7 @@ export function decryptFile(file, encryptionKey) {
    const urlString = "http://localhost:8060/api/v1/masterfileencryptor/decrypt-file";
    const request = new Request(urlString, { method: "POST", body: formData });
 
-   doFetchForFile(request);
+   doFetchForFile(request, "dec");
 }
 
 // ENCRYPT PLAIN TEXT
@@ -64,7 +66,9 @@ export function decryptText(text, encryptionKey) {
 }
 
 // FETCH REQUEST FOR FILE
-function doFetchForFile(request) {
+function doFetchForFile(request, operation) {
+   showProgressBar();
+
    fetch(request)
       .then(response => {
          console.log(response);
@@ -82,13 +86,14 @@ function doFetchForFile(request) {
          const disposition = response.headers.get("Content-Disposition");
 
          if (disposition && disposition.includes("attachment")) {
-            filename = extractFileName(disposition);
+            filename = extractFileName(disposition, operation);
 
             return response.blob();
          }
       })
       .then(blob => {
          const url = window.URL.createObjectURL(blob);
+         hideProgressBar();
          generateDownloadLink(url, filename);
       })
       .catch(console.error);
@@ -144,10 +149,16 @@ function validateTextFormData(text, encryptionKey, encryptionKey2) {
    return true;
 }
 
-function extractFileName (disposition) {
+function extractFileName (disposition, operation) {
    // Extract filename using a regular expression
    const matches = /filename="(.+?)"/.exec(disposition);
-   const filename = matches ? matches[1] : 'downloaded-file';
+   let filename = matches ? matches[1] : 'downloaded-file';
+
+   if (operation === "enc") {
+      filename = "mfeEnc_".concat(filename);
+   } else {
+      filename = filename.includes("mfeEnc_") ? filename.replace("mfeEnc_", "mfeDec_") : "mfeDec_".concat(filename);
+   }
 
    return filename;
 }

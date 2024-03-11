@@ -162,6 +162,10 @@
   background: linear-gradient(to bottom, rgb(247, 191, 89), rgb(228, 153, 13));
 }
 
+.progress-bar-section {
+  margin-top: 20px;
+}
+
 .download-section {
   background-color: rgb(8, 8, 8);
   margin: 0 auto;
