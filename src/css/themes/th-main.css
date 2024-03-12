@@ -1,0 +1,75 @@
+.light-theme-main {
+   background-color: white;
+   color: rgb(58, 58, 58);
+   font-weight: 500;
+ }
+ 
+ .light-theme-main .hero-section {
+   border-bottom-color: rgb(199, 199, 199);
+ }
+ 
+ .light-theme-main a {
+   color: rgb(185, 123, 7);
+ }
+ 
+ .light-theme-main .encryption-op-section {
+   background-color: rgb(245, 245, 245);
+   box-shadow: 2px 2px 10px 1px rgb(199, 199, 199);
+   margin: 0 40px;
+ }
+ 
+ .light-theme-main .feo {
+   color: rgb(58, 58, 58);
+ }
+ 
+ .light-theme-main .encryption-links {
+   background-color: rgb(235, 235, 235);
+ }
+ 
+ .light-theme-main .encryption-links li {
+   background-color: rgb(20, 20, 20);
+ }
+ 
+ .light-theme-main .download-section {
+   background-color: white;
+   color: rgb(58, 58, 58);
+ }
+ 
+ .light-theme-main .selected-file {
+   color: white;
+ }
+ 
+ .light-theme-main .share-section {
+   background-color: rgb(245, 245, 245);
+ }
+ 
+ .light-theme-main .share-section img {
+   box-shadow: 0px 4px 2px rgb(59, 59, 59);
+ }
+ 
+ .light-theme-main .encrypt-button, .decrypt-button {
+   box-shadow: 0px 4px 2px rgb(59, 59, 59);
+ }
+
+ @media (min-width: 320px) and (max-width: 380px) {
+   .light-theme-main .encryption-op-section {
+      margin: 10px;
+    }
+  
+    .light-theme-main .encryption-links {
+      padding: 10px;
+    }
+ }
+
+ @media (min-width: 381px) and (max-width: 570px) {
+   .light-theme-main .encryption-op-section {
+      margin: 16px;
+    }
+ }
+
+ @media (min-width: 1801px) {
+   .light-theme-main .encryption-op-section {
+      margin: 100px;
+      font-size: 1em;
+    }
+ }

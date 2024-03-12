@@ -1,0 +1,52 @@
+.light-theme-sidebar {
+   background-color: white;
+   color: rgb(58, 58, 58);
+}
+
+.light-theme-sidebar.sidebar {
+   box-shadow: 1px 8px 10px rgb(58, 58, 58);
+   border: none;
+}
+
+.light-theme-sidebar .cancel-icon {
+   background-color: rgb(245, 245, 245);
+}
+
+.light-theme-sidebar .cancel-icon:hover {
+   background-color: rgb(58, 58, 58);
+}
+
+.light-theme-sidebar .sidebar-links li {
+   border-bottom: 1px solid rgb(220, 220, 220);
+}
+
+.light-theme-sidebar .sidebar-links li:hover {
+   background-color: rgb(58, 58, 58);
+   color: rgb(255, 221, 157);
+}
+
+.light-theme-sidebar .sidebar-links a {
+   color: rgb(185, 123, 7);
+   font-weight: 600;
+}
+
+.light-theme-sidebar .sidebar-links a:hover {
+   color: rgb(250, 186, 68);
+}
+
+.light-theme-sidebar .signin-button {
+   /* background: linear-gradient(to bottom, rgb(255, 209, 125), rgb(167, 108, 0)); */
+   background: rgb(58, 58, 58);
+   color: whitesmoke;
+}
+
+.light-theme-sidebar .signin-button:hover {
+   color: rgb(58, 58, 58);
+   background: rgb(255, 213, 136);
+}
+
+@media (min-width: 1801px) {
+   .light-theme-sidebar .sidebar-links li {
+      border-bottom: 2px solid rgb(220, 220, 220);
+   }
+}

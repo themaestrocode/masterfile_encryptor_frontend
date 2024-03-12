@@ -1,0 +1,38 @@
+/* light theme settings */
+.light-theme-header {
+   background-color: white;
+ }
+ 
+ .light-theme-header.header {
+   box-shadow: 1px 1px 10px grey;
+   border: none;
+ }
+ 
+ .light-theme-header .nav-links-item {
+   color: rgb(185, 123, 7);
+   font-weight: 600;
+   background-color: rgb(245, 245, 245);
+ }
+ 
+ .light-theme-header .nav-links-item:hover {
+   background-color: rgb(58, 58, 58);
+   color: rgb(255, 221, 157);
+ }
+ 
+ .light-theme-header .home-link {
+   background-color: rgb(58, 58, 58);
+ }
+ 
+ .light-theme-header .switch-theme {
+   background-color: rgb(58, 58, 58);
+ }
+ 
+ .light-theme-header .menu-icon {
+   background-color: rgb(58, 58, 58);
+ }
+ 
+ @media (min-width: 1801px) {
+  .light-theme-header.header {
+   box-shadow: 4px 4px 40px 10px gray;
+ }
+ }
