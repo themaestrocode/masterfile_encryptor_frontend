@@ -55,6 +55,7 @@ function setTheme () {
 
    function toggleTheme() {
       mainSection.classList.toggle("light-theme-main");
-      document.querySelector(".header").classList.toggle("light-theme-header");
+      document.querySelector(".js-header").classList.toggle("light-theme-header");
+      document.querySelector(".js-sidebar").classList.toggle("light-theme-sidebar");
    }
 }
