@@ -4,13 +4,15 @@ body {
   margin: 0;
   font-family: Roboto, Arial;
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.8;
   padding-top: 80px;
   position: relative;
 }
 
-h1 {
-  line-height: normal;
+
+
+h1, h2, h3, h4 {
+  line-height: 1.6;
 }
 
 a {
@@ -18,7 +20,14 @@ a {
   color: rgb(255, 221, 157);
 }
 
-@media (min-width: 320px) and (max-width: 570px) {
+@media (min-width: 320px) and (max-width: 380px) {
+  body {
+    font-size: 12px;
+    padding-top: 50px;
+  }
+}
+
+@media (min-width: 381px) and (max-width: 570px) {
   body {
     padding-top: 50px;
     font-size: 12px;
@@ -28,13 +37,13 @@ a {
 
 @media (min-width: 1401px) and (max-width: 1800px) {
   body {
-    font-size: 18px;
+    font-size: 22px;
   }
 }
 
 @media (min-width: 1801px) {
   body {
-    font-size: 32px;
+    font-size: 34px;
     padding-top: 160px;
   }
 }

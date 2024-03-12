@@ -1,29 +1,80 @@
 .hero-section {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgb(49, 49, 49);
+  margin: 0 100px;
+}
+
+.light-theme-main {
+  background-color: white;
+  color: rgb(58, 58, 58);
+  font-weight: 500;
+}
+
+.light-theme-main .hero-section {
+  border-bottom-color: rgb(199, 199, 199);
+}
+
+.light-theme-main a {
+  color: rgb(185, 123, 7);
+}
+
+.light-theme-main .encryption-op-section {
+  background-color: rgb(245, 245, 245);
+  box-shadow: 2px 2px 10px 1px rgb(199, 199, 199);
+  margin: 0 40px;
+}
+
+.light-theme-main .feo {
+  color: rgb(58, 58, 58);
+}
+
+.light-theme-main .encryption-links {
+  background-color: rgb(235, 235, 235);
+}
+
+.light-theme-main .encryption-links li {
+  background-color: rgb(20, 20, 20);
+}
+
+.light-theme-main .download-section {
+  background-color: white;
+  color: rgb(58, 58, 58);
+}
+
+.light-theme-main .selected-file {
+  color: white;
+}
+
+.light-theme-main .share-section {
+  background-color: rgb(245, 245, 245);
+}
+
+.light-theme-main .share-section img {
+  box-shadow: 2px 2px 14px gray;
+}
+
+.light-theme-main .encrypt-button, .decrypt-button {
+  box-shadow: 2px 2px 8px grey;
 }
 
 .hero-section img {
-  height: 400px;
-  width: 100%;
+  padding-top: 20px;
+  height: 120px;
   object-fit: cover;
-  /* position: relative; */
 }
 
 .hero-text {
-  /* background-color: aqua; */
-  position: absolute;
-  font-size: 5rem;
+  font-size: 5em;
   text-align: center;
-  margin: 0;
-  left: 10%;
-  top: 40%;
-  right: 10%;
+  margin: 20px 0 40px;
 }
 
 .about-section {
   margin: 0 auto;
-  padding: 40px 200px;
-  /* max-width: 60%; */
+  padding: 80px 200px 40px;
   text-align: center;
   font-size: 1rem;
 }
@@ -64,9 +115,8 @@
 .encryption-links {
   background-color: black;
   border-radius: 10px;
-  padding: 20px;
+  padding: 10px;
   margin-bottom: 40px;
-  /* max-width: 620px; */
   list-style: none;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -76,6 +126,8 @@
 
 .encryption-links li {
   margin: 0 30px;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .encryption-links a {
@@ -127,6 +179,7 @@
   width: 280px;
   min-width: 100px;
   font-size: 1em;
+  border: 1px solid rgb(180, 180, 180);
   border-radius: 4px;
 }
 
@@ -225,7 +278,7 @@
 }
 
 .guide-section h3 {
-  margin: 0;
+  margin: 10px 0;
 }
 
 .guide-section p {
@@ -238,7 +291,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 40px;
+  margin-top: 40px;
+  padding-top: 30px;
 }
 
 .social-icons {
@@ -260,20 +314,123 @@
   height: 36px;
 }
 
-@media (min-width: 320px) and (max-width: 570px) {
-  .hero-section img {
-    height: 200px;
+@media (min-width: 320px) and (max-width: 380px) {
+  .hero-text {
+    font-size: 2.3em;
+    margin: 12px 0 20px;
   }
 
-  .hero-text {
-    font-size: 2rem;
-    left: 8%;
-    right: 8%;
-    top: 40%;
+  .hero-section {
+    margin: 0 10px;
+  }
+
+  .hero-section img {
+    height: 60px;
+    padding-top: 20px;
   }
 
   .about-section {
-    padding: 6px 40px;
+    font-size: 1em;
+    padding: 20px ;
+    margin: 0;
+  }
+  
+  .important-section {
+    margin: 0;
+  }
+
+  .guide-section p, .important-section p {
+    font-size: 1em;
+    padding: 10px 20px 20px;
+    margin: 0;
+  }
+
+  .encryption-op-section {
+    margin: 0;
+    padding: 0;
+  }
+
+  .encryption-links {
+    grid-template-columns: 1fr 1fr;
+    font-size: 0.7em;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+
+  .encryption-links a img {
+    height: 20px;
+    margin-right: 6px;
+  }
+
+  .selected-file, .encryption-key, .encryption-key2, .feo {
+    width: 190px;
+    font-size: 0.8em;
+    margin: 0;
+    padding: 8px;
+  }
+
+  .form-section, .feo p {
+    font-size: 0.8em;
+  }
+
+  .form-section input {
+    margin: 10px;
+  }
+
+  .light-theme-main .encryption-op-section {
+    margin: 10px;
+  }
+
+  .light-theme-main .encryption-links {
+    padding: 10px;
+  }
+
+  .encryption-links li {
+    margin: 4px;
+  }
+
+  .encrypt-button, .decrypt-button {
+    font-size: 1em;
+    padding: 8px 14px;
+    margin: 10px 0;
+  }
+
+  .share-section {
+    margin-top: 20px;
+    padding: 10px 0;
+  }
+
+  .social-icons li {
+    margin: 0 12px;
+  }
+
+  .social-icons img {
+    height: 20px;
+  }
+
+  .social-icons img:hover {
+    height: 24px;
+  }
+}
+
+@media (min-width: 381px) and (max-width: 570px) {
+  .hero-section {
+    margin: 0 20px;
+    padding-top: 20px;
+  }
+
+  .hero-section img {
+    height: 60px;
+    padding-top: 0px;
+  }
+
+  .hero-text {
+    font-size: 2.5em;
+    margin: 10px 0 20px;
+  }
+
+  .about-section {
+    padding: 20px 40px;
     font-size: 1em;
   }
 
@@ -294,6 +451,10 @@
     padding: 10px 0;
     font-size: 1em;
   }
+
+  .light-theme-main .encryption-op-section {
+    margin: 16px;
+  }
   
   .encryption-links {
     padding: 12px;
@@ -308,7 +469,6 @@
   
   .encryption-links a img {
     height: 20px;
-    border-radius: 50%;
     margin-right: 6px;
   }
 
@@ -397,23 +557,25 @@
 }
 
 @media (min-width: 571px) and (max-width: 999px) {
+  .hero-section {
+    margin: 0 50px;
+  }
+
   .hero-section img {
-    height: 300px;
+    height: 110px;
   }
 
   .hero-text {
-    font-size: 3.5rem;
-    left: 8%;
-    right: 8%;
-    top: 30%;
+    font-size: 3em;
+    margin: 20px 0 30px;
   }
 
   .about-section {
-    padding: 6px 100px;
+    padding: 60px 80px 20px;
   }
 
   .important-section p {
-    margin: 0 100px;
+    margin: 0 80px;
   }
 
   .encryption-op-section {
@@ -434,7 +596,6 @@
   }
   
   .encryption-links a img {
-    height: 30px;
     margin-right: 12px;
   }
 
@@ -447,8 +608,8 @@
   }
 
   .guide-section p {
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 80px;
+    margin-right: 80px;
   }
 
   h2 {
@@ -457,6 +618,15 @@
 }
 
 @media (min-width: 1000px) and (max-width: 1400px) {
+  .hero-section img {
+    padding-top: 40px;
+    height: 140px;
+  }
+
+  .hero-text {
+    padding: 20px 0 30px;
+  }
+
   h2 {
     font-size: 2em;
   }
@@ -469,7 +639,13 @@
 
 @media (min-width: 1401px) and (max-width: 1800px) {
   .hero-section img {
-    height: 500px;
+    padding-top: 50px;
+    height: 210px;
+  }
+
+  .hero-text {
+    padding: 40px 0 50px;
+    font-size: 4.5em;
   }
 
   .about-section, .important-section, .encryption-op-section, .encrypt-button,
@@ -480,39 +656,48 @@
 
   .selected-file, .encryption-key, .encryption-key2, .feo {
     padding: 16px;
+    width: 350px;
   }
 
 }
 
 @media (min-width: 1801px) {
+  .hero-section {
+    margin: 0 180px;
+  }
+
   .hero-section img {
-    height: 800px;
+    height: 300px;
+    padding-top: 80px;
   }
 
   .hero-text {
-    font-size: 5em;
+    font-size: 4em;
+    padding: 60px 0 80px;
   }
 
   .about-section {
-    padding: 30px 200px;
+    padding: 120px 240px;
     font-size: 1em;
   }
 
   .important-section p {
-    margin: 0 200px;
+    margin: 0 240px;
   }
 
-  .encryption-op-section {
+  .light-theme-main .encryption-op-section {
+    margin: 100px;
     font-size: 1em;
   }
   
   .encryption-links {
     padding: 40px;
-    column-gap: 60px;
+    column-gap: 20px;
   }
   
   .encryption-links li {
-    margin: 0 40px;
+    margin: 0 20px;
+    padding: 30px;
   }
   
   .encryption-links a img {
@@ -556,7 +741,7 @@
   }
 
   .guide-section p {
-    margin: 40px 200px;
+    margin: 40px 240px;
   }
 
   .social-icons img {

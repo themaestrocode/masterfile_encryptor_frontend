@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2021 (64-Bit) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="106.745mm" height="105.193mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 833.66 821.53"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:black;stroke-width:66.12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256}
+    .fil2 {fill:none}
+    .fil1 {fill:black}
+    .fil0 {fill:url(#id1)}
+   ]]>
+  </style>
+   <clipPath id="id0">
+    <path d="M416.83 161.01c137.94,0 249.76,111.82 249.76,249.76 0,137.94 -111.82,249.76 -249.76,249.76 -137.94,0 -249.76,-111.82 -249.76,-249.76 0,-137.94 111.82,-249.76 249.76,-249.76z"/>
+   </clipPath>
+  <linearGradient id="id1" gradientUnits="userSpaceOnUse" x1="-0" y1="410.77" x2="833.66" y2="410.77">
+   <stop offset="0" style="stop-opacity:1; stop-color:#FFDD9D"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#FFDD9D"/>
+  </linearGradient>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <rect class="fil0" x="0" width="833.66" height="821.53"/>
+  <g>
+  </g>
+  <g style="clip-path:url(#id0)">
+   <g>
+    <polygon class="fil1" points="642.82,152.91 913.85,324.75 459.18,828.26 188.14,656.42 "/>
+   </g>
+  </g>
+  <path class="fil2 str0" d="M416.83 161.01c137.94,0 249.76,111.82 249.76,249.76 0,137.94 -111.82,249.76 -249.76,249.76 -137.94,0 -249.76,-111.82 -249.76,-249.76 0,-137.94 111.82,-249.76 249.76,-249.76z"/>
+ </g>
+</svg>

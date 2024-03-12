@@ -2,7 +2,7 @@ import { encryptFile, encryptText } from "./file.js";
 import { formSection, downloadSection } from "./utils.js";
 
 export function renderEncryptionHTML() {
-   downloadSection.innerHTML = "";
+   downloadSection.style.display = "none";
 
    formSection.innerHTML = `
       <form class="encryption-form js-encryption-form" enctype="multipart/form-data">

@@ -1,6 +1,7 @@
 import { renderEncryptionHTML, renderTextEncryptionHTML } from "./encryption.js";
 import { renderDecryptionHTML, renderTextDecryptionHTML } from "./decryption.js";
 
+setTheme();
 renderEncryptionHTML();
 
 document.querySelector(".js-encrypt-file").addEventListener("click", () => renderEncryptionHTML());
@@ -24,6 +25,7 @@ canceIcon.addEventListener("click", () => {
 });
 
 const copyButton = document.querySelector(".js-copy-cb");
+copyButton.style.cursor = "pointer";
 copyButton.addEventListener("click", () => {
    // Create a temporary textarea element to facilitate copying
    const textarea = document.createElement('textarea');
@@ -37,4 +39,22 @@ copyButton.addEventListener("click", () => {
    // Remove the temporary textarea
    document.body.removeChild(textarea);
 });
-copyButton.style.cursor = "pointer";
+
+function setTheme () {
+   document.addEventListener("DOMContentLoaded", () => {
+      const switchTheme = document.querySelector(".js-switch-theme");
+
+      localStorage.getItem("theme") === "light" && toggleTheme();
+
+      switchTheme.addEventListener("click", () => {
+         toggleTheme();
+
+         mainSection.classList.contains("light-theme-main") ? localStorage.setItem("theme", "light") : localStorage.setItem("theme", "dark");
+      });
+   });
+
+   function toggleTheme() {
+      mainSection.classList.toggle("light-theme-main");
+      document.querySelector(".header").classList.toggle("light-theme-header");
+   }
+}
