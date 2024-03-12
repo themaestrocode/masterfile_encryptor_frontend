@@ -2,7 +2,7 @@ import { decryptFile, decryptText } from "./file.js";
 import { formSection, downloadSection } from "./utils.js";
 
 export function renderDecryptionHTML() {
-   downloadSection.style.display = "none";
+   downloadSection.innerHTML = "";
 
    formSection.innerHTML = `
       <form class="decryption-form js-decryption-form" enctype="multipart/form-data">

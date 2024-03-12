@@ -15,13 +15,13 @@ const mainSection = document.querySelector("main");
 
 menuIcon.addEventListener("click", () => {
    sidebar.style.display = "block";
-   mainSection.style.opacity = "0.1";
+   mainSection.classList.toggle("disable-interaction");
 });
 
 const canceIcon = document.querySelector(".js-cancel-icon");
 canceIcon.addEventListener("click", () => {
    sidebar.style.display = "none";
-   mainSection.style.opacity = "1";
+   mainSection.classList.toggle("disable-interaction");
 });
 
 const copyButton = document.querySelector(".js-copy-cb");

@@ -4,6 +4,8 @@ let filename = "";
 
 //ENCRYPT FILE
 export function encryptFile(file, encryptionKey, encryptionKey2, feoSelection) {
+   downloadSection.innerHTML = "";
+
    if (!validateFileFormData(file, encryptionKey, encryptionKey2)) return;
 
    const formData = new FormData();
@@ -19,6 +21,8 @@ export function encryptFile(file, encryptionKey, encryptionKey2, feoSelection) {
 
 // DECRYPT FILE
 export function decryptFile(file, encryptionKey) {
+   downloadSection.innerHTML = "";
+
    if (!validateFileFormData(file, encryptionKey, encryptionKey)) return;
 
    const formData = new FormData();
@@ -33,6 +37,8 @@ export function decryptFile(file, encryptionKey) {
 
 // ENCRYPT PLAIN TEXT
 export function encryptText(text, encryptionKey, encryptionKey2) {
+   downloadSection.innerHTML = "";
+
    if (!validateTextFormData(text, encryptionKey, encryptionKey2)) return;
 
    const textObject = { text, encryptionKey };
@@ -49,6 +55,8 @@ export function encryptText(text, encryptionKey, encryptionKey2) {
 
 //DECRYPT PLAIN TEXT
 export function decryptText(text, encryptionKey) {
+   downloadSection.innerHTML = "";
+
    if (!validateTextFormData(text, encryptionKey, encryptionKey)) return;
 
    const textObject = { text, encryptionKey };
@@ -79,7 +87,10 @@ function doFetchForFile(request, operation) {
          else if (response.status === 422) displayErrorMessage("Your file could not be processed. Your key may be invalid/incorrect.");
          else displayErrorMessage("Some error occured. Please try again.");
 
-         if (!validResponse) throw new Error(`Invalid response: ${response.status} - ${response.statusText}`);
+         if (!validResponse) {
+            hideProgressBar();
+            throw new Error(`Invalid response: ${response.status} - ${response.statusText}`);
+         }
 
          const disposition = response.headers.get("Content-Disposition");
 
@@ -91,7 +102,6 @@ function doFetchForFile(request, operation) {
       })
       .then(blob => {
          const url = window.URL.createObjectURL(blob);
-         hideProgressBar();
          generateDownloadLink(url, filename);
       })
       .catch(console.error);
@@ -99,6 +109,8 @@ function doFetchForFile(request, operation) {
 
 // FETCH REQUEST FOR PLAIN TEXT
 function doFetchForText(request) {
+   showProgressBar();
+
    fetch(request)
       .then(response => {
          console.log(response);
@@ -108,8 +120,10 @@ function doFetchForText(request) {
          // else if (response.status === 400) displayErrorMessage("The provided key is invalid/incorrect!");
          else displayErrorMessage("Some error occured. Please try again and ensure you are using the right key.");
 
-         if (!validResponse) throw new Error(`Invalid response: ${response.status} - ${response.statusText}`);
-
+         if (!validResponse) {
+            hideProgressBar();
+            throw new Error(`Invalid response: ${response.status} - ${response.statusText}`);
+         }
          return response.text();
       })
       .then(textResult => {
@@ -169,6 +183,7 @@ function displayErrorMessage(errorMessage) {
 function generateDownloadLink(url, filename) {
    downloadSection.classList.contains("error-message") && downloadSection.classList.remove("error-message");
 
+   hideProgressBar();
    downloadSection.innerHTML = `
       <p class="filename">${filename}</p>
       <p>Your file is ready!</p>
@@ -181,6 +196,7 @@ function generateDownloadLink(url, filename) {
 function diaplayTextResult(textResult) {
    downloadSection.classList.contains("error-message") && downloadSection.classList.remove("error-message");
 
+   hideProgressBar();
    downloadSection.innerHTML = `
       <div class="text-result-div">
          <p>Your text is ready!</p>

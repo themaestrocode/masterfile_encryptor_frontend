@@ -1,3 +1,8 @@
+.disable-interaction {
+  pointer-events: none;
+  opacity: 0.1;
+}
+
 .hero-section {
   display: flex;
   flex-direction: column;
@@ -262,7 +267,7 @@
   font-size: 1rem;
 }
 
-.error-message {
+.error-message ,.light-theme-main .error-message {
   background-color: rgb(20, 20, 20);
   color: rgb(216, 0, 0);
   padding: 10px;

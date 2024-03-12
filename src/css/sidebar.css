@@ -1,6 +1,7 @@
 .sidebar {
    background-color: rgb(15, 15, 15);
    position: fixed;
+   height: 100vh;
    top: 0;
    bottom: 0;
    z-index: 2000;
@@ -24,6 +25,10 @@
 
 .light-theme-sidebar .cancel-icon:hover {
    background-color: rgb(58, 58, 58);
+}
+
+.light-theme-sidebar .sidebar-links li {
+   border-bottom: 1px solid rgb(220, 220, 220);
 }
 
 .light-theme-sidebar .sidebar-links li:hover {
@@ -72,6 +77,7 @@
 .sidebar-links li {
    border-radius: 6px;
    cursor: pointer;
+   border-bottom: 1px solid rgb(58, 58, 58);
 }
 
 .sidebar-links li:hover {
@@ -157,6 +163,11 @@
 
    .sidebar-links li {
       padding: 20px 60px;
+      border-bottom: 2px solid rgb(58, 58, 58);;
+   }
+
+   .light-theme-sidebar .sidebar-links li {
+      border-bottom: 2px solid rgb(220, 220, 220);
    }
 
    .cancel-icon {
