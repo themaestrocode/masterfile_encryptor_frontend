@@ -29,7 +29,15 @@
  .light-theme-main .encryption-links li {
    background-color: rgb(20, 20, 20);
  }
- 
+
+ .light-theme-main .encryption-links li a {
+  color: rgb(255, 221, 157);
+ }
+
+ .light-theme-main .encryption-links li a:hover {
+  color: rgb(185, 123, 7);
+ }
+
  .light-theme-main .download-section {
    background-color: white;
    color: rgb(58, 58, 58);

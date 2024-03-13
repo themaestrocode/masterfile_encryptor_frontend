@@ -21,10 +21,6 @@ export function hideProgressBar () {
 }
 
 export function loadCurrentTheme () {
-   // document.addEventListener("DOMContentLoaded", () => {
-
-   // });
-
    localStorage.getItem("theme") === "light" && toggleTheme();
 }
 
