@@ -15,7 +15,7 @@ function renderLoginFormHTML() {
       </form>
 
       <div class="signup-instead">
-         <p>Don't have an account? <a class="signup-suggestion js-signup-suggestion">Sign up for free</a></p>
+         <p>Don't have an account?<br> <a class="signup-suggestion js-signup-suggestion">Sign up for free</a></p>
       </div>
    `;
 
@@ -38,7 +38,7 @@ function renderSignupFormHTML() {
       </form>
 
       <div class="login-instead">
-         <p>Already have an account? <a class="login-suggestion js-login-suggestion">Login</a></p>
+         <p>Already have an account?<br> <a class="login-suggestion js-login-suggestion">Login</a></p>
       </div>
    `;
 

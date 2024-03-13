@@ -1,4 +1,4 @@
-import { showProgressBar, hideProgressBar, downloadSection } from "./utils.js";
+import { showProgressBar, hideProgressBar, downloadSection } from "../controller/utils.js";
 
 let filename = "";
 

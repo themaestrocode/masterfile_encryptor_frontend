@@ -1,5 +1,5 @@
-import { renderEncryptionHTML, renderTextEncryptionHTML } from "./encryption.js";
-import { renderDecryptionHTML, renderTextDecryptionHTML } from "./decryption.js";
+import { renderEncryptionHTML, renderTextEncryptionHTML } from "./index/encryption.js";
+import { renderDecryptionHTML, renderTextDecryptionHTML } from "./index/decryption.js";
 import { loadCurrentTheme, switchTheme, toggleTheme, mainSection, menuIcon, sidebar, canceIcon } from "./utils.js";
 
 loadCurrentTheme();

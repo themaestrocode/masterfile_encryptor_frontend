@@ -1,5 +1,5 @@
-import { encryptFile, encryptText } from "./file.js";
-import { formSection, downloadSection } from "./utils.js";
+import { encryptFile, encryptText } from "../../model/file.js";
+import { formSection, downloadSection } from "../utils.js";
 
 export function renderEncryptionHTML() {
    downloadSection.innerHTML = "";

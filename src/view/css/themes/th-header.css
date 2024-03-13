@@ -30,6 +30,10 @@
  .light-theme-header .menu-icon {
    background-color: rgb(58, 58, 58);
  }
+
+ .light-theme-header .home-link:hover, .menu-icon:hover, .switch-theme:hover {
+  background-color: black;
+ }
  
  @media (min-width: 1801px) {
   .light-theme-header.header {
