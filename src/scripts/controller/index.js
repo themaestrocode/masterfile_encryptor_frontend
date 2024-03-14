@@ -1,6 +1,6 @@
-import { renderEncryptionHTML, renderTextEncryptionHTML } from "./index/encryption.js";
-import { renderDecryptionHTML, renderTextDecryptionHTML } from "./index/decryption.js";
-import { loadCurrentTheme, switchTheme, toggleTheme, mainSection, menuIcon, sidebar, canceIcon } from "./utils.js";
+import { renderEncryptionHTML, renderTextEncryptionHTML } from "../service/encryption.js";
+import { renderDecryptionHTML, renderTextDecryptionHTML } from "../service/decryption.js";
+import { loadCurrentTheme, switchTheme, toggleTheme, mainSection, menuIcon, sidebar, canceIcon } from "../utils/shared-utils.js";
 
 loadCurrentTheme();
 renderEncryptionHTML();
@@ -31,7 +31,7 @@ copyButton.style.cursor = "pointer";
 copyButton.addEventListener("click", () => {
    // Create a temporary textarea element to facilitate copying
    const textarea = document.createElement('textarea');
-   textarea.value = "http://127.0.0.1:5501";
+   textarea.value = "https://mfe-puce.vercel.app";
    // Append the textarea to the document
    document.body.appendChild(textarea);
    // Select the text in the textarea

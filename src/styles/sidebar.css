@@ -1,5 +1,5 @@
 .sidebar {
-   background-color: rgb(15, 15, 15);
+   background-color: rgb(15, 15, 17);
    position: fixed;
    height: 100vh;
    top: 0;
@@ -24,7 +24,7 @@
 .sidebar-links {
    list-style: none;
    padding: 4px 50px 20px 50px;
-   margin: 0;
+   margin-bottom: 20px;
 }
 
 .sidebar-links li {
@@ -40,11 +40,12 @@
 
 .sidebar-links a {
    display: block;
-   padding: 10px 20px;
+   padding: 20px 20px 4px;
 }
 
 .signin-button {
-   background: linear-gradient(to bottom, rgb(255, 221, 157), rgb(252, 181, 50));
+   background: linear-gradient(to bottom, rgb(255, 186, 59), rgb(129, 84, 0));
+   color: white;
    border: none;
    border-radius: 4px;
    padding: 16px 60px;
@@ -55,7 +56,8 @@
 }
 
 .signin-button:hover {
-   background: linear-gradient(to bottom, rgb(247, 191, 89), rgb(228, 153, 13));
+   background: rgb(255, 195, 84);
+   color: black;
 }
 
 @media (min-width: 320px) and (max-width: 570px) {
@@ -77,11 +79,11 @@
    }
    
    .sidebar-links {
-      padding: 0 10px 20px 10px;
+      padding: 0 10px 20px;
    }
 
    .sidebar-links a {
-      padding: 10px 20px;
+      padding: 18px 14px 4px;
    }
 
    .signin-button {
@@ -97,8 +99,17 @@
       height: 16px;
    }
 
+   .sidebar-links {
+      margin-bottom: 40px;
+   }
+
    .signin-button {
       font-size: 1em;
+      padding: 24px 80px;
+   }
+
+   .sidebar-links a {
+      padding: 30px 24px 10px;
    }
  
  }
@@ -112,6 +123,7 @@
    .sidebar-links {
       list-style: none;
       padding: 40px 100px 20px 100px;
+      margin-bottom: 60px;
    }
 
    .sidebar-links li {
@@ -127,7 +139,7 @@
 
    .signin-button {
       font-size: 1em;
-      padding: 30px 120px;
+      padding: 40px 140px;
       margin-left: 140px;
       margin-top: 20px;
    }

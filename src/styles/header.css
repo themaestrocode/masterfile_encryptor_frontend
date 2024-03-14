@@ -1,5 +1,5 @@
 .header {
-  background-color: rgb(15, 15, 15);
+  background-color: rgb(10, 10, 12);
   height: 80px;
   display: flex;
   justify-content: space-between;
@@ -40,8 +40,9 @@
   height: 18px;
 }
 
-.menu-icon:hover, .home-link:hover, .switch-theme:hover {
-  background-color: black;
+.menu-icon:hover, .home-link:hover {
+  border: 1px solid rgb(255, 221, 157);
+  padding: 9px;
 }
 
 .mid {
@@ -74,17 +75,23 @@
 
 .nav-links a:hover {
   color: rgb(250, 186, 68);
-  background-color: black;
+  border: 1px solid rgb(255, 221, 157);
+  padding: 5px 9px;
 }
 
 .switch-theme {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 6px 24px;
+  padding: 7px 24px;
   margin: 0 30px 0 20px;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.switch-theme:hover {
+  border: 1px solid rgb(255, 221, 157);
+  padding: 6px 23px;
 }
 
 .switch-theme img {
@@ -106,6 +113,10 @@
     margin: 0;
     padding: 6px;
   }
+
+  .menu-icon:hover, .home-link:hover {
+    padding: 5px;
+  }
   
   .home-link {
     margin: 0 6px;
@@ -122,12 +133,16 @@
 
   .switch-theme {
     margin: 0 10px 0 0;
-    padding: 0;
+    padding: 6px 14px;
+  }
+
+  .switch-theme:hover {
+    padding: 5px 13px;
   }
 
   .switch-theme img {
     height: 20px;
-    padding: 4px 10px;
+    /* padding: 4px 10px; */
   }
 }
 
@@ -143,12 +158,16 @@
   .menu-icon {
     height: 10px;
     margin: 0;
-    padding: 6px;
+    padding: 8px 6px;
+  }
+
+  .menu-icon:hover, .home-link:hover {
+    padding: 7px 5px;
   }
   
   .home-link {
     margin: 0 6px;
-    padding: 6px;
+    padding: 8px 6px;
   }
   
   .home-link img {
@@ -166,9 +185,17 @@
     font-size: 0.8em;
   }
 
+  .nav-links a:hover {
+    padding: 3px 7px;
+  }
+
   .switch-theme {
     margin: 0 10px 0 4px;
-    padding: 6px 14px;
+    padding: 6px 18px;
+  }
+
+  .switch-theme:hover {
+    padding: 5px 17px;
   }
 
   .switch-theme img {
@@ -198,6 +225,10 @@
     margin-left: 20px;
     border-radius: 10px;
   }
+
+  .home-link:hover, .menu-icon:hover {
+    padding: 29px;
+  }
   
   .home-link img {
     height: 40px;
@@ -209,9 +240,17 @@
     border-radius: 10px;
   }
 
+  .nav-links a:hover {
+    padding: 17px 29px;
+  }
+
   .switch-theme {
     padding: 20px 60px;
     border-radius: 10px;
+  }
+
+  .switch-theme:hover {
+    padding: 19px 59px;
   }
 
   .switch-theme img {

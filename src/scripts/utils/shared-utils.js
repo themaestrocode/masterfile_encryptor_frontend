@@ -24,28 +24,6 @@ export function loadCurrentTheme () {
    localStorage.getItem("theme") === "light" && toggleTheme();
 }
 
-// document.addEventListener("DOMContentLoaded", () => {
-
-//    localStorage.getItem("theme") === "light" && toggleTheme();
-
-//    switchTheme.addEventListener("click", () => {
-//       toggleTheme();
-
-//       mainSection.classList.contains("light-theme-main") ? localStorage.setItem("theme", "light") : localStorage.setItem("theme", "dark");
-//    });
-
-//    menuIcon.addEventListener("click", () => {
-//       sidebar.style.display = "block";
-//       mainSection.classList.toggle("disable-interaction");
-//    });
-
-//    
-//    canceIcon.addEventListener("click", () => {
-//       sidebar.style.display = "none";
-//       mainSection.classList.toggle("disable-interaction");
-//    });
-// });
-
 export function toggleTheme() {
    mainSection.classList.toggle("light-theme-main");
    document.querySelector(".js-header").classList.toggle("light-theme-header");

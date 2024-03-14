@@ -17,6 +17,8 @@
  .light-theme-header .nav-links-item:hover {
    background-color: rgb(58, 58, 58);
    color: rgb(255, 221, 157);
+   border: none;
+   padding: 6px 10px;
  }
  
  .light-theme-header .home-link {
@@ -31,8 +33,11 @@
    background-color: rgb(58, 58, 58);
  }
 
- .light-theme-header .home-link:hover, .menu-icon:hover, .switch-theme:hover {
+ .light-theme-header .home-link:hover,
+ .light-theme-header .menu-icon:hover,
+ .light-theme-header .switch-theme:hover {
   background-color: black;
+  border: none;
  }
  
  @media (min-width: 1801px) {

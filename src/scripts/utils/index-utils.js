@@ -1,78 +1,9 @@
-import { showProgressBar, hideProgressBar, downloadSection } from "../controller/utils.js";
+import { showProgressBar, hideProgressBar, downloadSection } from "./shared-utils.js";
 
 let filename = "";
 
-//ENCRYPT FILE
-export function encryptFile(file, encryptionKey, encryptionKey2, feoSelection) {
-   downloadSection.innerHTML = "";
-
-   if (!validateFileFormData(file, encryptionKey, encryptionKey2)) return;
-
-   const formData = new FormData();
-   formData.append("file", file);
-   formData.append("encryptionKey", encryptionKey);
-   feoSelection === "DYNAMIC" && formData.append("encryptionMode", feoSelection);
-
-   const urlString = "http://localhost:8060/api/v1/masterfileencryptor/encrypt-file";
-   const request = new Request(urlString, { method: "POST", body: formData });
-
-   doFetchForFile(request, "enc");
-}
-
-// DECRYPT FILE
-export function decryptFile(file, encryptionKey) {
-   downloadSection.innerHTML = "";
-
-   if (!validateFileFormData(file, encryptionKey, encryptionKey)) return;
-
-   const formData = new FormData();
-   formData.append("file", file);
-   formData.append("encryptionKey", encryptionKey);
-
-   const urlString = "http://localhost:8060/api/v1/masterfileencryptor/decrypt-file";
-   const request = new Request(urlString, { method: "POST", body: formData });
-
-   doFetchForFile(request, "dec");
-}
-
-// ENCRYPT PLAIN TEXT
-export function encryptText(text, encryptionKey, encryptionKey2) {
-   downloadSection.innerHTML = "";
-
-   if (!validateTextFormData(text, encryptionKey, encryptionKey2)) return;
-
-   const textObject = { text, encryptionKey };
-
-   const urlString = "http://localhost:8060/api/v1/masterfileencryptor/encrypt-text";
-   const request = new Request(urlString, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(textObject)
-   });
-
-   doFetchForText(request);
-}
-
-//DECRYPT PLAIN TEXT
-export function decryptText(text, encryptionKey) {
-   downloadSection.innerHTML = "";
-
-   if (!validateTextFormData(text, encryptionKey, encryptionKey)) return;
-
-   const textObject = { text, encryptionKey };
-
-   const urlString = "http://localhost:8060/api/v1/masterfileencryptor/decrypt-text";
-   const request = new Request(urlString, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(textObject)
-   });
-
-   doFetchForText(request);
-}
-
 // FETCH REQUEST FOR FILE
-function doFetchForFile(request, operation) {
+export function doFetchForFile(request, operation) {
    showProgressBar();
 
    fetch(request)
@@ -108,7 +39,7 @@ function doFetchForFile(request, operation) {
 }
 
 // FETCH REQUEST FOR PLAIN TEXT
-function doFetchForText(request) {
+export function doFetchForText(request) {
    showProgressBar();
 
    fetch(request)
@@ -128,37 +59,14 @@ function doFetchForText(request) {
       })
       .then(textResult => {
          console.log(textResult);
-         diaplayTextResult(textResult);
+         displayTextResult(textResult);
       })
       .catch(console.error);
 }
 
-function validateFileFormData(file, encryptionKey, encryptionKey2) {
-   const maxSize = 200 * 1024 * 1024; // 200MB in bytes
-
-   if (file.size > maxSize) {
-      alert("File size exceeds the maximum limit of 200MB.");
-      return false;
-   }
-   else if (encryptionKey !== encryptionKey2) {
-      displayErrorMessage("Encryption keys do not match!");
-      return false;
-   }
-
-   return true;
-}
-
-function validateTextFormData(text, encryptionKey, encryptionKey2) {
-   if (text.trim().length === 0) {
-      alert("Cannot encrypt/decrypt empty text");
-      return false;
-   }
-   else if (encryptionKey !== encryptionKey2) {
-      displayErrorMessage("Encryption keys do not match!");
-      return false;
-   }
-
-   return true;
+export function displayErrorMessage(errorMessage) {
+   downloadSection.innerHTML = `<p>${errorMessage}</p>`;
+   downloadSection.classList.add("error-message");
 }
 
 function extractFileName (disposition, operation) {
@@ -175,11 +83,6 @@ function extractFileName (disposition, operation) {
    return filename;
 }
 
-function displayErrorMessage(errorMessage) {
-   downloadSection.innerHTML = `<p>${errorMessage}</p>`;
-   downloadSection.classList.add("error-message");
-}
-
 function generateDownloadLink(url, filename) {
    downloadSection.classList.contains("error-message") && downloadSection.classList.remove("error-message");
 
@@ -193,7 +96,7 @@ function generateDownloadLink(url, filename) {
    `;
 }
 
-function diaplayTextResult(textResult) {
+function displayTextResult(textResult) {
    downloadSection.classList.contains("error-message") && downloadSection.classList.remove("error-message");
 
    hideProgressBar();

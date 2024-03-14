@@ -39,6 +39,11 @@
   padding-top: 10px;
 }
 
+.about-section a:hover, .important-section a:hover {
+  text-decoration: underline;
+  color: rgb(250, 186, 68);;
+}
+
 .important-section {
   display: flex;
   flex-direction: column;
@@ -53,7 +58,7 @@
 }
 
 .encryption-op-section {
-  background-color: rgb(10, 10, 10);
+  background-color: rgb(10, 10, 12);
   padding: 40px 0;
   margin: 0 auto;
   text-align: center;
@@ -65,7 +70,7 @@
 }
 
 .encryption-links {
-  background-color: black;
+  /* background-color: rgb(4, 4, 6); */
   border-radius: 10px;
   padding: 10px;
   margin-bottom: 40px;
@@ -79,7 +84,9 @@
 .encryption-links li {
   margin: 0 30px;
   border-radius: 10px;
-  padding: 10px;
+  background-color: rgb(4, 4, 6);
+  /* border: 1px solid rgb(85, 85, 85); */
+  border: 1px solid rgb(255, 221, 157);;
 }
 
 .encryption-links a {
@@ -90,6 +97,7 @@
   color: rgb(255, 221, 157);
   text-decoration: none;
   text-wrap: nowrap;
+  padding: 10px;
 }
 
 .encryption-links a img {
@@ -213,7 +221,7 @@
   font-size: 1rem;
 }
 
-.error-message ,.light-theme-main .error-message {
+.error-message {
   background-color: rgb(20, 20, 20);
   color: rgb(216, 0, 0);
   padding: 10px;
@@ -623,6 +631,10 @@
   .important-section p {
     margin: 0 240px;
   }
+
+  .encryption-op-section {
+    font-size: 1em;
+  }
   
   .encryption-links {
     padding: 40px;
@@ -631,7 +643,7 @@
   
   .encryption-links li {
     margin: 0 20px;
-    padding: 30px;
+    padding: 28px;
   }
   
   .encryption-links a img {
@@ -656,7 +668,7 @@
 
   .text-input {
     font-size: 1em;
-    width: 700px;
+    width: 800px;
     height: 240px;
   }
 
