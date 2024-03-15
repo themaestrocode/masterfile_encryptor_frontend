@@ -47,24 +47,58 @@ function renderSignupFormHTML() {
 
    document.querySelector(".js-signup-form").addEventListener("submit", (event) => {
       event.preventDefault();
-      
+
       const email = document.querySelector(".js-email");
       const password = document.querySelector(".js-password");
       const confirmPassword = document.querySelector(".js-confirm-password");
 
       if (!validateUserRegistrationData(email.value, password.value, confirmPassword.value)) return;
 
-      const userDetailsObject = { email : email.value, password : password.value };
+      const userDetailsObject = { email: email.value, password: password.value };
       registerUser(userDetailsObject);
    });
 }
 
-function validateUserRegistrationData (email, password, confirmPassword) {
-   if (email.length === 0) {
+function registerUser(userDetailsObject) {
+   console.log(userDetailsObject);
+
+   const urlString = "http://localhost:8060/api/v1/masterfileencryptor/sign-up";
+   const request = new Request(urlString, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(userDetailsObject)
+   });
+
+   fetch(request)
+      .then(response => {
+         console.log(response);
+         let validResponse = false;
+
+         if (response.status !== 201) throw new Error("user registration failed!");
+
+         return response.json();
+      })
+      .then(json => console.log(json.message))
+      .catch(console.error);
+}
+
+function validateUserRegistrationData(email, password, confirmPassword) {
+   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+   if (!emailRegex.test(email)) {
       displaySigninAttemptFailedMessage("invalid email address!");
       return false;
    } else if (password.trim().length === 0 || password.length < 8) {
       displaySigninAttemptFailedMessage("Password must be at least 8 characters longs.");
+      return false;
+   } else if ((password.match(/[a-z]/g) || []).length < 1) { // checking for lowercase character in the password
+      displaySigninAttemptFailedMessage("Password must contain at least 1 lowercase character.");
+      return false;
+   } else if ((password.match(/[A-Z]/g) || []).length < 1) { // checking for uppercase character in the password
+      displaySigninAttemptFailedMessage("password must contain at least 1 uppercase character.");
+      return false;
+   } else if ((password.match(/[0-9]/g) || []).length < 1) { // checking for number in the password
+      displaySigninAttemptFailedMessage("Password must contain at least 1 number.");
       return false;
    } else if (password !== confirmPassword) {
       displaySigninAttemptFailedMessage("Passwords do not match. Check and try again.");
@@ -75,14 +109,10 @@ function validateUserRegistrationData (email, password, confirmPassword) {
    return true;
 }
 
-function registerUser(userDetailsObject) {
-   console.log(userDetailsObject);
-}
-
-function displaySigninAttemptFailedMessage (message) {
+function displaySigninAttemptFailedMessage(message) {
    signinAttemptMessage.innerHTML = `<p class="error-message">${message}</p>`;
 }
 
-function displaySigninAttemptSuccessMessage (message) {
-   signinAttemptMessage.innerHTML = `<p class="success-message"><img src="icons/checkmark.png">  ${message}</p>`;
+function displaySigninAttemptSuccessMessage(message) {
+   signinAttemptMessage.innerHTML = `<p class="success-message"><img src="icons/checkmark.png"> ${message}</p>`;
 }

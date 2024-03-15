@@ -67,7 +67,7 @@ function decryptFile(fileDecryptionObject) {
    formData.append("file", fileDecryptionObject.selectedFile);
    formData.append("encryptionKey", fileDecryptionObject.encryptionKey);
 
-   const urlString = "http://localhost:8060/api/v1/masterfileencryptor/decrypt-file";
+   const urlString = "http://localhost:8060/api/v1/public/masterfileencryptor/decrypt-file";
    const request = new Request(urlString, { method: "POST", body: formData });
 
    doFetchForFile(request, "dec");
@@ -77,7 +77,7 @@ function decryptFile(fileDecryptionObject) {
 function decryptText(textDecryptionObject) {
    downloadSection.innerHTML = "";
 
-   const urlString = "http://localhost:8060/api/v1/masterfileencryptor/decrypt-text";
+   const urlString = "http://localhost:8060/api/v1/public/masterfileencryptor/decrypt-text";
    const request = new Request(urlString, {
       method: "POST",
       headers: { "Content-Type": "application/json" },

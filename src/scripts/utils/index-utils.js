@@ -104,7 +104,7 @@ function displayTextResult(textResult) {
       <div class="text-result-div">
          <p>Your text is ready!</p>
          <a class="copy-text-result js-copy-text-result" title="Copy result to Clipboard">
-            <img src="images/icons/mycopy.svg" />
+            <img src="icons/mycopy.svg" />
          </a>
          <p class="text-result">${textResult}</p>
       </div>

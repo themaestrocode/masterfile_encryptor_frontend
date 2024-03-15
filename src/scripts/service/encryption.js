@@ -29,17 +29,17 @@ export function renderEncryptionHTML() {
    document.querySelector(".js-encryption-form").addEventListener("submit", (event) => {
       event.preventDefault();
 
-      const selectedFile = document.querySelector(".js-selected-file").files[0];
-      const encryptionKey = document.querySelector(".js-encryption-key").value;
-      const encryptionKey2 = document.querySelector(".js-encryption-key2").value;
-      const feoSelection = document.querySelector(".js-feo").value;
+      const selectedFile = document.querySelector(".js-selected-file");
+      const encryptionKey = document.querySelector(".js-encryption-key");
+      const encryptionKey2 = document.querySelector(".js-encryption-key2");
+      const feoSelection = document.querySelector(".js-feo");
 
-      if (!validateFileFormData(selectedFile, encryptionKey, encryptionKey2)) return;
+      if (!validateFileFormData(selectedFile.files[0], encryptionKey.value, encryptionKey2.value)) return;
 
-      encryptFile({ selectedFile, encryptionKey, feoSelection });
+      encryptFile({ selectedFile: selectedFile.files[0], encryptionKey: encryptionKey.value, feoSelection: feoSelection.value });
 
-      encryptionKey = "";
-      encryptionKey2 = "";
+      encryptionKey.value = "";
+      encryptionKey2.value = "";
    });
 }
 
@@ -64,16 +64,16 @@ export function renderTextEncryptionHTML() {
    document.querySelector(".js-encryption-form").addEventListener("submit", (event) => {
       event.preventDefault();
 
-      const text = document.querySelector(".js-text-input").value;
-      const encryptionKey = document.querySelector(".js-encryption-key").value;
-      const encryptionKey2 = document.querySelector(".js-encryption-key2").value;
+      const text = document.querySelector(".js-text-input");
+      const encryptionKey = document.querySelector(".js-encryption-key");
+      const encryptionKey2 = document.querySelector(".js-encryption-key2");
 
-      if (!validateTextFormData(text, encryptionKey, encryptionKey2)) return;
+      if (!validateTextFormData(text.value, encryptionKey.value, encryptionKey2.value)) return;
 
-      encryptText({ text, encryptionKey });
+      encryptText({ text: text.value, encryptionKey: encryptionKey.value });
 
-      encryptionKey = "";
-      encryptionKey2 = "";
+      encryptionKey.value = "";
+      encryptionKey2.value = "";
    });
 }
 
