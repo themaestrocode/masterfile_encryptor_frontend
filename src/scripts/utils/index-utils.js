@@ -91,7 +91,7 @@ function generateDownloadLink(url, filename) {
       <p class="filename">${filename}</p>
       <p>Your file is ready!</p>
       <div class="download-link">
-         <a href="${url}" download="${filename}">Download your file</a>
+         <a href="${url}" download="${filename}" style="color: white">Download your file</a>
       </div>
    `;
 }

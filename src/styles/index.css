@@ -58,7 +58,7 @@
 }
 
 .encryption-op-section {
-  background-color: rgb(10, 10, 12);
+  background-color: rgb(12, 12, 13);
   padding: 40px 0;
   margin: 0 auto;
   text-align: center;
@@ -86,7 +86,7 @@
   border-radius: 10px;
   background-color: rgb(4, 4, 6);
   /* border: 1px solid rgb(85, 85, 85); */
-  border: 1px solid rgb(255, 221, 157);;
+  border: 1px solid rgb(49, 49, 49);
 }
 
 .encryption-links a {

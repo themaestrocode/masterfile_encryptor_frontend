@@ -74,11 +74,15 @@ function registerUser(userDetailsObject) {
          console.log(response);
          let validResponse = false;
 
-         if (response.status !== 201) throw new Error("user registration failed!");
+         if (response.ok && response.status === 201) validResponse = true;
+         else if (response.status === 409) displaySigninAttemptFailedMessage("This email is registered with another user.");
+         else displaySigninAttemptFailedMessage("Some error occured. Registration failed!");
+
+         if (!validResponse) throw new Error(`Invalid response: ${response.status} - ${response.statusText}`);
 
          return response.json();
       })
-      .then(json => console.log(json.message))
+      .then(() => displaySigninAttemptSuccessMessage())
       .catch(console.error);
 }
 
@@ -105,7 +109,6 @@ function validateUserRegistrationData(email, password, confirmPassword) {
       return false;
    }
 
-   displaySigninAttemptSuccessMessage("success");
    return true;
 }
 
@@ -113,6 +116,12 @@ function displaySigninAttemptFailedMessage(message) {
    signinAttemptMessage.innerHTML = `<p class="error-message">${message}</p>`;
 }
 
-function displaySigninAttemptSuccessMessage(message) {
-   signinAttemptMessage.innerHTML = `<p class="success-message"><img src="icons/checkmark.png"> ${message}</p>`;
+function displaySigninAttemptSuccessMessage() {
+   signinAttemptMessage.innerHTML = `
+      <p class="success-message">
+         <img src="icons/checkmark.png"><br>
+         Your account has been successfully created and a verification link has been sent to your email.
+         The link is valid for 30 minutes only.
+      </p>
+   `;
 }

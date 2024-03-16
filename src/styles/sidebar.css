@@ -1,5 +1,5 @@
 .sidebar {
-   background-color: rgb(15, 15, 17);
+   background-color: rgb(17, 17, 18);
    position: fixed;
    height: 100vh;
    top: 0;
@@ -34,7 +34,7 @@
 }
 
 .sidebar-links li:hover {
-   background-color: black;
+   background-color: rgb(32, 32, 32);
    color: rgb(250, 186, 68);
 }
 
