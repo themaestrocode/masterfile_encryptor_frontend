@@ -4,6 +4,12 @@ const signinAttemptMessage = document.querySelector(".js-signin-attempt-message"
 renderLoginFormHTML();
 
 function renderLoginFormHTML() {
+   const urlParams = new URLSearchParams(window.location.search); // Parse the query parameters from the URL
+   if (urlParams.has("verification") && urlParams.get("verification") === "success") {
+      document.querySelector(".js-signup-success-section")
+         .innerHTML = `<p style="color: rgb(0, 177, 0); text-align: center;">Email verification successful.</p>`;
+   }
+
    signinSection.innerHTML = `
       <form class="login-form js-login-form">
          <label for="email">Email</label><br>
@@ -21,6 +27,8 @@ function renderLoginFormHTML() {
    `;
 
    document.querySelector(".js-signup-suggestion").addEventListener("click", () => renderSignupFormHTML());
+
+   document.querySelector(".js-login-form");
 }
 
 function renderSignupFormHTML() {
@@ -84,6 +92,10 @@ function registerUser(userDetailsObject) {
       })
       .then(() => displaySigninAttemptSuccessMessage())
       .catch(console.error);
+}
+
+function renderSignupSuccessHTML() {
+
 }
 
 function validateUserRegistrationData(email, password, confirmPassword) {
