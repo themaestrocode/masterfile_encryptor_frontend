@@ -7,6 +7,19 @@ body {
   line-height: 1.8;
   padding-top: 80px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding-bottom: 60px;
+}
+
+.disable-interaction {
+  pointer-events: none;
+  opacity: 0.1;
 }
 
 h1, h2, h3, h4 {
@@ -37,11 +50,19 @@ a {
   body {
     font-size: 22px;
   }
+
+  main {
+    padding-bottom: 80px;
+  }
 }
 
 @media (min-width: 1801px) {
   body {
     font-size: 34px;
     padding-top: 160px;
+  }
+
+  main {
+    padding-bottom: 120px;
   }
 }

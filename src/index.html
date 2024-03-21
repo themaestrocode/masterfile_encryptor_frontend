@@ -36,13 +36,10 @@
       <div class="mid">
          <ul class="nav-links">
             <li>
-               <a href="file-compression.html" class="nav-links-item">Compress File</a>
+               <a class="nav-links-item" onclick="alert('coming soon')">Compress File</a>
             </li>
             <li>
-               <a href="" class="nav-links-item">Blog</a>
-            </li>
-            <li>
-               <a href="signin.html" class="nav-links-item">Sign in</a>
+               <a class="nav-links-item" onclick="alert('coming soon')">Blog</a>
             </li>
          </ul>
       </div>
@@ -62,14 +59,12 @@
             <a href="index.html">Encryption/Decryption</a>
          </li>
          <li>
-            <a href="file-compression.html">File compression</a>
+            <a onclick="alert('coming soon')">File compression</a>
          </li>
          <li>
-            <a>Blog</a>
+            <a onclick="alert('coming soon')">Blog</a>
          </li>
       </ul>
-
-      <a href="signin.html" class="signin-button js-signin-button">Sign in</a>
    </div>
 
    <main>
@@ -94,7 +89,7 @@
             encryption tool ensures data privacy and puts you in control of your
             data and files. Whatever the file type or extension (JPEG, PNG, PDF,
             TXT, MP3, MP4, and more), we got you covered!
-            <a href="#encryption-decryption" style="display: block">Try for free.</a>
+            <a href="#encryption-decryption" style="text-wrap: nowrap;">Try for free.</a>
          </p>
       </div>
 
@@ -104,7 +99,7 @@
             Kindly note that we do not save your encryption keys. If you forget
             your encryption key, there is no way to decrypt your file in the
             future. Please, keep it save. Read the
-            <a href="#usage-guide">usage guide</a> below to learn more.
+            <a href="#usage-guide" style="text-wrap: nowrap;">usage guide</a> below to learn more.
          </p>
       </div>
 
@@ -182,6 +177,10 @@
          </p>
       </div>
 
+   </main>
+
+   <!-- FOOTER SECTION -->
+   <footer>
       <!-- SHARE SECTION -->
       <div class="share-section">
          <h4 style="margin: 0">Recommend this site to others</h4>
@@ -217,17 +216,25 @@
             </li>
          </ul>
       </div>
-   </main>
 
-   <!-- FOOTER SECTION -->
-   <footer>
+      <!-- FOOTER LINKS -->
+      <div class="footer-links">
+         <ul>
+            <li><a href="privacy-policy.html">Privacy policy</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+         </ul>
+      </div>
+      
       <div class="footer-declarations">
+         <p>WebApp Version 1.0</p>
          <p>MasterFile Encryptor © 2024.</p>
          <p>All Rights Reserved.</p>
       </div>
    </footer>
 
    <!-- javascript attachments -->
+   <script type="module" src="scripts/controller/general.js"></script>
    <script type="module" src="scripts/controller/index.js"></script>
 </body>
 

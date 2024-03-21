@@ -1,0 +1,22 @@
+.privacy-section {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding: 10%;
+}
+
+.bottom {
+   padding-top: 40px;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   column-gap: 8%;
+   row-gap: 10%px;
+}
+
+@media (min-width: 320px) and (max-width: 999px) {
+   .bottom {
+      padding-top: 20px;
+      grid-template-columns: 1fr;
+   }
+}
+

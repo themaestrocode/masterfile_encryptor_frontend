@@ -9,9 +9,9 @@
  }
  
  .light-theme-header .nav-links-item {
-   color: rgb(185, 123, 7);
+   color: rgb(58, 58, 58);
    font-weight: 600;
-   background-color: rgb(245, 245, 245);
+   background-color: rgb(240, 240, 240);
  }
  
  .light-theme-header .nav-links-item:hover {

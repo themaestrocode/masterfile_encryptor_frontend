@@ -22,10 +22,6 @@
    color: rgb(58, 58, 58);
  }
  
- .light-theme-main .encryption-links {
-   /* background-color: rgb(235, 235, 235); */
- }
- 
  .light-theme-main .encryption-links li {
    background-color: rgb(29, 29, 29);
    border: none;

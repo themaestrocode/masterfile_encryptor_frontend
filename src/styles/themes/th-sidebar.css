@@ -9,7 +9,7 @@
 }
 
 .light-theme-sidebar .cancel-icon {
-   background-color: rgb(245, 245, 245);
+   background-color: rgb(240, 240, 240);
 }
 
 .light-theme-sidebar .cancel-icon:hover {
@@ -26,12 +26,12 @@
 }
 
 .light-theme-sidebar .sidebar-links a {
-   color: rgb(185, 123, 7);
+   color: rgb(58, 58, 58);
    font-weight: 600;
 }
 
 .light-theme-sidebar .sidebar-links a:hover {
-   color: rgb(250, 186, 68);
+   color: rgb(255, 221, 157);
 }
 
 .light-theme-sidebar .signin-button {

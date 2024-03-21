@@ -1,25 +1,7 @@
-import { renderEncryptionHTML, renderTextEncryptionHTML } from "../service/encryption.js";
-import { renderDecryptionHTML, renderTextDecryptionHTML } from "../service/decryption.js";
-import { loadCurrentTheme, switchTheme, toggleTheme, mainSection, menuIcon, sidebar, canceIcon } from "../utils/shared-utils.js";
+import { renderEncryptionHTML, renderTextEncryptionHTML } from "../service/encryption-service.js";
+import { renderDecryptionHTML, renderTextDecryptionHTML } from "../service/decryption-service.js";
 
-loadCurrentTheme();
 renderEncryptionHTML();
-
-switchTheme.addEventListener("click", () => {
-   toggleTheme();
-
-   mainSection.classList.contains("light-theme-main") ? localStorage.setItem("theme", "light") : localStorage.setItem("theme", "dark");
-});
-
-menuIcon.addEventListener("click", () => {
-   sidebar.style.display = "block";
-   mainSection.classList.toggle("disable-interaction");
-});
-
-canceIcon.addEventListener("click", () => {
-   sidebar.style.display = "none";
-   mainSection.classList.toggle("disable-interaction");
-});
 
 document.querySelector(".js-encrypt-file").addEventListener("click", () => renderEncryptionHTML());
 document.querySelector(".js-decrypt-file").addEventListener("click", () => renderDecryptionHTML());

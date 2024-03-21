@@ -19,13 +19,3 @@ export function showProgressBar () {
 export function hideProgressBar () {
    formSection.innerHTML = "";
 }
-
-export function loadCurrentTheme () {
-   localStorage.getItem("theme") === "light" && toggleTheme();
-}
-
-export function toggleTheme() {
-   mainSection.classList.toggle("light-theme-main");
-   document.querySelector(".js-header").classList.toggle("light-theme-header");
-   document.querySelector(".js-sidebar").classList.toggle("light-theme-sidebar");
-}
