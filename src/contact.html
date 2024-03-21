@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <title>MasterFile Encryptor</title>
    <meta charset="UTF-8" />
@@ -15,14 +16,14 @@
       rel="stylesheet" />
    <link rel="stylesheet" href="styles/general.css" />
    <link rel="stylesheet" href="styles/header.css" />
-   <link rel="stylesheet" href="styles/index.css" />
+   <link rel="stylesheet" href="styles/contact.css" />
    <link rel="stylesheet" href="styles/footer.css" />
    <link rel="stylesheet" href="styles/sidebar.css" />
    <!-- for light theme -->
    <link rel="stylesheet" href="styles/themes/th-header.css" />
    <link rel="stylesheet" href="styles/themes/th-sidebar.css" />
    <link rel="stylesheet" href="styles/themes/th-main.css" />
-   
+
 </head>
 
 <body>
@@ -67,9 +68,40 @@
       </ul>
    </div>
 
+   </div>
    <main>
-      
+      <div class="contact-section">
+         <div class="contact-title">
+            <h1>Get In Touch With Us</h1>
+            <p><b>We'd love to hear from you.</b></p>
+         </div>
+         <div class="contact-form-div">
+            <form class="js-contact-form">
+               <label>Full name</label><br>
+               <input class="full-name js-full-name" type="text" placeholder="Enter your full name"><br>
 
+               <label>Email</label><br>
+               <input class="email js-email" type="email" placeholder="Enter your email adress"><br>
+
+               <label>Message</label><br>
+               <textarea class="message js-message" placeholder="Your message here..."></textarea><br>
+
+               <button class="send-button js-send-button" type="submit">Send</button>
+            </form>
+         </div>
+
+         <div class="js-outcome"></div>
+
+         <div>
+            <p>Thank you for choosing MasterFile Encryptor Web App. We appreciate your trust in us as we work towards a
+               safer and more secure digital environment for all.</p>
+         </div>
+      </div>
+
+   </main>
+
+   <!-- FOOTER SECTION -->
+   <footer>
       <!-- SHARE SECTION -->
       <div class="share-section">
          <h4 style="margin: 0">Recommend this site to others</h4>
@@ -105,15 +137,23 @@
             </li>
          </ul>
       </div>
-   </main>
 
-   <!-- FOOTER SECTION -->
-   <footer>
+      <div class="footer-links">
+         <ul>
+            <li><a href="privacy-policy.html">Privacy policy</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+         </ul>
+      </div>
+
       <div class="footer-declarations">
          <p>MasterFile Encryptor © 2024.</p>
          <p>All Rights Reserved.</p>
       </div>
    </footer>
+
+   <script type="module" src="scripts/controller/general.js"></script>
+   <script src="scripts/controller/contact.js"></script>
 
 </body>
 

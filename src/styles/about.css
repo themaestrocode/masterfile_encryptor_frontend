@@ -1,0 +1,14 @@
+.about-section {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding: 10%;
+}
+
+@media (min-width: 320px) and (max-width: 999px) {
+   .bottom {
+      padding-top: 20px;
+      grid-template-columns: 1fr;
+   }
+}
+
