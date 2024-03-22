@@ -8,7 +8,6 @@ export function doFetchForFile(request, operation) {
 
    fetch(request)
       .then(response => {
-         console.log(response);
          let validResponse = false;
 
          if (response.status === 200 && response.ok) validResponse = true;
@@ -44,7 +43,6 @@ export function doFetchForText(request) {
 
    fetch(request)
       .then(response => {
-         console.log(response);
          let validResponse = false;
 
          if (response.status === 200 && response.ok) validResponse = true;
@@ -58,7 +56,6 @@ export function doFetchForText(request) {
          return response.text();
       })
       .then(textResult => {
-         console.log(textResult);
          displayTextResult(textResult);
       })
       .catch(console.error);

@@ -16,23 +16,18 @@ function sendMessage(messageFormData) {
    formData.append("email", messageFormData.email);
    formData.append("message", messageFormData.message);
 
-   const urlString = "http://localhost:8060/api/v1/masterfileencryptor/send-message";
-   const request = new Request(urlString, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: formData
-   });
+   const urlString = "http://localhost:8060/api/v1/mfe/send-message";
+   const request = new Request(urlString, { method: "POST", body: formData});
 
    fetch(request)
       .then(response => {
-         console.log(response);
          let validResponse = false;
 
          if (response.ok && response.status === 200) validResponse = true;
          else displayMessageOutcome("Message failed to send!", false);
 
          if (!validResponse) throw new Error(`Invalid response: ${response.status} - ${response.statusText}`);
-
+         
          displayMessageOutcome("Message successfully sent", true);
       })
       .catch(console.error);
