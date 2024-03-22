@@ -86,7 +86,7 @@ function encryptFile(fileEncryptionObject) {
    formData.append("encryptionKey", fileEncryptionObject.encryptionKey);
    fileEncryptionObject.feoSelection === "DYNAMIC" && formData.append("encryptionMode", fileEncryptionObject.feoSelection);
 
-   const urlString = "http://localhost:8060/api/v1/mfe/encrypt-file";
+   const urlString = "https://masterfileencryptorapi.onrender.com/api/v1/encrypt-file";
    const request = new Request(urlString, { method: "POST", body: formData });
 
    doFetchForFile(request, "enc");
@@ -96,7 +96,7 @@ function encryptFile(fileEncryptionObject) {
 function encryptText(textEncryptionObject) {
    downloadSection.innerHTML = "";
 
-   const urlString = "http://localhost:8060/api/v1/mfe/encrypt-text";
+   const urlString = "https://masterfileencryptorapi.onrender.com/api/v1/encrypt-text";
    const request = new Request(urlString, {
       method: "POST",
       headers: { "Content-Type": "application/json" },

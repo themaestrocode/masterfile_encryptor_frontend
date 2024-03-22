@@ -16,7 +16,7 @@ function sendMessage(messageFormData) {
    formData.append("email", messageFormData.email);
    formData.append("message", messageFormData.message);
 
-   const urlString = "http://localhost:8060/api/v1/mfe/send-message";
+   const urlString = "https://masterfileencryptorapi.onrender.com/api/v1/send-message";
    const request = new Request(urlString, { method: "POST", body: formData});
 
    fetch(request)
