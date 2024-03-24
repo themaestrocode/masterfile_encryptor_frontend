@@ -22,7 +22,7 @@ function sendMessage(messageFormData) {
    fetch(request)
       .then(response => {
          let validResponse = false;
-
+ 
          if (response.ok && response.status === 200) validResponse = true;
          else displayMessageOutcome("Message failed to send!", false);
 
