@@ -19,7 +19,7 @@ copyButton.style.cursor = "pointer";
 copyButton.addEventListener("click", () => {
    // Create a temporary textarea element to facilitate copying
    const textarea = document.createElement('textarea');
-   textarea.value = "https://https://masterfileencryptor.vercel.app";
+   textarea.value = "https://masterfileencryptor.vercel.app";
    // Append the textarea to the document
    document.body.appendChild(textarea);
    // Select the text in the textarea
